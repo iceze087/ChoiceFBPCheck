@@ -1,0 +1,89 @@
+/* -----------sidenav style---------- */
+#bodystyle {
+  background-color: gray;
+}
+.navbar {
+  background-color: white;
+  height: 10%;
+}
+#projectname {
+  font-size: 1.8rem;
+  text-align: center;
+}
+#sidenav {
+  height: 100%;
+  width: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 70px;
+}
+#sidenav a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+#sidenav label:hover {
+  color: red;
+}
+#sidenav span:hover {
+  color: red;
+}
+#sidenav span {
+  color: black;
+}
+#sidenav label {
+  font-size: 1rem;
+  color: black;
+}
+#btnclose {
+  font-size: 1.8rem;
+  border-style: solid;
+  border-radius: 10px;
+}
+#offcanvasNavbar {
+  width: 60%;
+}
+#offcanvasNavbar a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+#offcanvasNavbar span {
+  color: black;
+}
+#offcanvasNavbar label {
+  font-size: 1rem;
+  color: black;
+}
+/* ----------- End sidenav style---------- */
+
+/* -----------body style---------- */
+body {
+  padding-top: 90px;
+  transition: margin-left 0.5s;
+  padding-left: 80px;
+  padding-right: 40px;
+}
+#content {
+  background-color: white;
+  padding: 2%;
+  border-radius: 25px;
+}
+.header {
+  text-align: center;
+}
+#fbpsubmit {
+  width: 100%;
+}
+
+/* ----------- End body style---------- */

@@ -1,0 +1,28 @@
+body{
+    font-family: 'Prompt', sans-serif;
+    padding-top: 60px;
+  }
+  
+  .header{
+    text-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  .logo {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  .loginform{
+    font-size: 1.2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .loginform label{
+    padding-top: 3%;
+  }
+  .loginform button{
+    font-size: 1.3rem;
+    margin-top: 5%;
+    width: 100%;
+  }

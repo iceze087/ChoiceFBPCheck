@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="my-table">
+        <tr>
+          <td>Row 1</td>
+        </tr>
+        <tr>
+          <td>Row 2</td>
+        </tr>
+        <tr>
+          <td>Row 3</td>
+        </tr>
+      </table>
+<script>
+function addRow(tableID) {
+    // Get a reference to the table
+    let tableRef = document.getElementById(tableID);
+  
+    // Insert a row at the end of the table
+    let newRow = tableRef.insertRow(-1);
+  
+    // Insert a cell in the row at index 0
+    let newCell = newRow.insertCell(0);
+  
+    // Append a text node to the cell
+    let newText = document.createTextNode('New bottom row');
+    let newText2 = document.createTextNode('New bottom row2');
+    newCell.appendChild(newText);
+    newCell.appendChild(newText2);
+  }
+  
+  // Call addRow() with the table's ID
+  addRow('my-table');
+  </script>      
+</body>
+</html>
