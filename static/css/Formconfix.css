@@ -1,6 +1,6 @@
 /* -----------sidenav style---------- */
 #bodystyle {
-    background-color: gray;
+    background-color: #E3E3E3;
   }
   .navbar {
     background-color: white;
@@ -93,6 +93,9 @@
     margin-top: 2%;
     margin-bottom: 2%;
     width: 100%;
-  }  
+  } 
+  .form-check-input{
+    font-size: 2rem
+  }
   /* ----------- End body style---------- */
   

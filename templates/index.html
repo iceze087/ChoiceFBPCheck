@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/FBP_input.css">
+    <link rel="stylesheet" href="../static/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -48,21 +48,6 @@
                                     for="">หน้าหลัก</label></a>
                         </li>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./FBP_input.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">fact_check</span>&nbsp;<label for="">FBP
-                                    ตรวจสอบ</label></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./Account_input.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">checklist_rtl</span>&nbsp;<label
-                                    for="">บัญชีตรวจสอบ</label></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./Audit_input.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">checklist_rtl</span>&nbsp;<label for="">Audit
-                                    ตรวจสอบ</label></a>
-                        </li>
-                        <li class="nav-item">
                             <a class="d-flex align-items-center" href="./Formconfix.html" style="display: flex;"><span
                                     class="material-symbols-outlined">settings</span>&nbsp;<label
                                     for="">ตั้งค่า</label></a>
@@ -84,18 +69,6 @@
                 class="material-symbols-outlined">home</span>&nbsp;<label for="" id="homepage"
                 hidden>หน้าหลัก</label></a>
         <hr>
-        <a class="d-flex align-items-center" href="./FBP_input.html" style="display: flex;"><span
-                class="material-symbols-outlined">fact_check</span>&nbsp;<label hidden for="" id="FPB">FBP
-                ตรวจสอบ</label></a>
-        <hr>
-        <a class="d-flex align-items-center" href="./Account_input.html" style="display: flex;"><span
-                class="material-symbols-outlined">checklist_rtl</span>&nbsp;<label for="" id="account"
-                hidden>บัญชีตรวจสอบ</label></a>
-        <hr>
-        <a class="d-flex align-items-center" href="./Audit_input.html" style="display: flex;"><span
-                class="material-symbols-outlined">event_available</span>&nbsp;<label for="" id="audit" hidden>Audit
-                ตรวจสอบ</label></a>
-        <hr>
         <a class="d-flex align-items-center" href="./Formconfix.html" style="display: flex;"><span
                 class="material-symbols-outlined">settings</span>&nbsp;<label for="" id="setting"
                 hidden>ตั้งค่า</label></a>
@@ -108,10 +81,24 @@
     <!-- ----------------------------------------------END NAV------------------------------------------------------ -->
     <!-- ----------------------------------------------content---------------------------------------------- -->
     <div id="content">
-        
+        <h3 class="header">เลือกสาขาที่ต้องการเข้าประเมิน</h3>
+        <hr>
+        <div class="container ">
+            <div class="row justify-content-center align-items-center" id="branchheader">
+                <div class="col-6 col-sm-8 d-flex align-items-center" id="bname"><span class="material-symbols-outlined">storefront</span>ชื่อสาขา</div>
+                <div class="col-6 col-sm-4 d-flex align-items-center" id="baction"><span class="material-symbols-outlined">list_alt</span>การเข้าประเมิน</div>
+            </div>
+            <hr>  
+            <div id="branch" class="branchdetail"></div>  
+            <!-- <div class="row justify-content-center align-items-center">
+                
+                <div class="col-6 col-sm-8 d-flex align-items-center" >11543 โครงการเดอะฟิวชั่น(บ้านท่อ)</div>
+                <div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" class="btn btn-secondary" id="btnaccess">ประเมินผล</button>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem;">edit_square</span></div>
+            </div> -->
+        </div>
     </div>
     <!-- ----------------------------------------------END content---------------------------------------------- -->
-    <script src="../static/javascript/FBP_input.js"></script>
+    <script src="../static/javascript/index.js"></script>
 </body>
 
 </html>

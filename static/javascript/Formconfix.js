@@ -2,9 +2,6 @@
 function sidenav() {
   document.getElementById("sidenav").style.width = "200px";
   document.getElementById("homepage").hidden = false;
-  document.getElementById("FPB").hidden = false;
-  document.getElementById("account").hidden = false;
-  document.getElementById("audit").hidden = false;
   document.getElementById("setting").hidden = false;
   document.getElementById("logout").hidden = false;
   document.getElementById("content").style.marginLeft = "200px";
@@ -13,9 +10,6 @@ function sidenav() {
 function closeNav() {
   document.getElementById("sidenav").style.width = "60px";
   document.getElementById("homepage").hidden = true;
-  document.getElementById("FPB").hidden = true;
-  document.getElementById("account").hidden = true;
-  document.getElementById("audit").hidden = true;
   document.getElementById("setting").hidden = true;
   document.getElementById("logout").hidden = true;
   document.getElementById("content").style.marginLeft = "5px";
@@ -38,20 +32,20 @@ function checkscreen() {
 
 // ------------------------------------ DataSet --------------------------------
 var FBP = [
-  "1.1  ยอดขายเฉลี่ย/วัน (Ex.VAT.ไม่รวมบัตรโทรศัพท์  ……………………….",
-  "1.2  GP ( ไม่รวมบัตรโทรศัพท์ ) : บาท  ……………………….",
-  "1.3  % Audit (รวมบัตรโทรศัพท์)",
-  "1.4  QSSI - หมวด Process",
-  "1.5  QSSI - หมวด Service",
-  "1.6  QSSI - หมวด Assortment",
-  "1.7  QSSI - หมวด Value",
-  "1.8  QSSI - หมวด Environment",
-  "1.9  QSSI - หมวด Quality",
-  "1.10 QSSI- หมวด Cleanliness",
-  "1.11 QSSI - สินค้าหมดอายุ",
-  "1.12 QSSI - สินค้าขาดจากร้านเฉลี่ย/เดือน",
-  "1.13 QSSI - หมวด Follow Up",
-  "1.14 จำนวนCR เฉพาะหมวดบริการ",
+  // "1.1  ยอดขายเฉลี่ย/วัน (Ex.VAT.ไม่รวมบัตรโทรศัพท์  ……………………….",
+  // "1.2  GP ( ไม่รวมบัตรโทรศัพท์ ) : บาท  ……………………….",
+  // "1.3  % Audit (รวมบัตรโทรศัพท์)",
+  // "1.4  QSSI - หมวด Process",
+  // "1.5  QSSI - หมวด Service",
+  // "1.6  QSSI - หมวด Assortment",
+  // "1.7  QSSI - หมวด Value",
+  // "1.8  QSSI - หมวด Environment",
+  // "1.9  QSSI - หมวด Quality",
+  // "1.10 QSSI- หมวด Cleanliness",
+  // "1.11 QSSI - สินค้าหมดอายุ",
+  // "1.12 QSSI - สินค้าขาดจากร้านเฉลี่ย/เดือน",
+  // "1.13 QSSI - หมวด Follow Up",
+  // "1.14 จำนวนCR เฉพาะหมวดบริการ",
   "2.1  อัตรากำลังคนรวมครบตามโครงสร้าง",
   "2.2  จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน",
   "2.3  จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน",
