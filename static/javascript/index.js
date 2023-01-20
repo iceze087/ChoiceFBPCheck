@@ -6,6 +6,7 @@ function sidenav() {
   document.getElementById("logout").hidden = false;
   document.getElementById("content").style.marginLeft = "200px";
   document.getElementById("navclose").hidden = false;
+  document.getElementById("opennavs").hidden = true;
 }
 function closeNav() {
   document.getElementById("sidenav").style.width = "60px";
@@ -14,6 +15,7 @@ function closeNav() {
   document.getElementById("logout").hidden = true;
   document.getElementById("content").style.marginLeft = "5px";
   document.getElementById("navclose").hidden = true;
+  document.getElementById("opennavs").hidden = false;
 }
 // ------------------------------END sidenav function---------------------------
 
@@ -24,10 +26,20 @@ function checkscreen() {
   if (w <= 576) {
     document.getElementById("bodystyle").style.paddingLeft = "0px";
     document.getElementById("bodystyle").style.paddingRight = "0px";
+    document.getElementById("projectname").hidden = true;
     document.getElementById("projectname").innerHTML = 'ประเมินผล การบริหารร้าน' + '<br>' + ' 7-Eleven'
     document.getElementById("projectname").style.fontSize = '1.2rem';
     document.getElementById("bname").style.fontSize = '1.2rem';
     document.getElementById("baction").style.fontSize = '1.2rem';
+  }
+  if (w > 576 && w <=820) {
+    document.getElementById("sidenav").style.paddingTop = "125px";
+    document.getElementById("bodystyle").style.paddingTop = "130px";
+    document.getElementById("bodystyle").style.paddingLeft = "70px";
+    document.getElementById("bodystyle").style.paddingRight = "10px";
+    document.getElementById("bodystyle").style.width = '100%';   
+    document.getElementById("projectname").innerHTML = "ประเมินผล การบริหารร้าน 7-Eleven";
+    document.getElementById("projectname").style.fontSize = "1.8rem";
   }
 }
 // ------------------------------------ END ScreenCheck --------------------------------
@@ -51,7 +63,7 @@ var branch = [
   {
     id : '3189',
     name :'อบต.สุเทพ',
-    status : 0
+    status : 1
   },
   {
     id : '4059',
@@ -76,20 +88,15 @@ var branch = [
   {
     id : '5147',
     name :'ตลาดแม่กวง',	
-    status : 0
+    status : 1
   },
 ]
 
 for(i=0 ; i<branch.length; i++){
-  console.log(branch[i].name)
   if(branch[i].status == 0){
-    document.getElementById('branch').innerHTML += '<div class="branchshow"><div class="row justify-content-center align-items-center"><div class="col-6 col-sm-8 d-flex align-items-center" >'+branch[i].id+' '+branch[i].name+'</div>'+'<div class="col-6 col-sm-4 d-flex align-items-center"><a href="./FBP_input.html"><button type="button" class="btn btn-secondary" onclick="localStorage.setItem('+'\''+'bcheck'+'\''+' , '+branch[i].id+')">ประเมินผล</button></a>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem;">edit_square</span></div></div></div>'
+    document.getElementById('branch').innerHTML += '<div class="branchshow"><div class="row justify-content-center align-items-center"><div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail" >'+branch[i].id+' '+branch[i].name+'</div>'+'<div class="col-6 col-sm-4 d-flex align-items-center"><a href="./FBP_input.html"><button type="button" class="btn btn-secondary" id="btn" onclick="localStorage.setItem('+'\''+'bcheck'+'\''+' , '+branch[i].id+')">ประเมินผล</button></a>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem;">edit_square</span></div></div></div>'
   }
   else{
-    document.getElementById('branch').innerHTML += '<div class="branchshow"><div class="row justify-content-center align-items-center"><div class="col-6 col-sm-8 d-flex align-items-center" >'+branch[i].id+' '+branch[i].name+'</div>'+'<div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" class="btn btn-success">ประเมินผล</button>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem; color:green;">task_alt</span></div></div></div>'
+    document.getElementById('branch').innerHTML += '<div class="branchshow"><div class="row justify-content-center align-items-center"><div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail" >'+branch[i].id+' '+branch[i].name+'</div>'+'<div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" id="btn" class="btn btn-success ">ประเมินผล</button>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem; color:green;">task_alt</span></div></div></div>'
   }
-}
-
-function setbcheck(id){
-  console.log(id)
 }

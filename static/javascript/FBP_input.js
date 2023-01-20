@@ -9,6 +9,7 @@ function sidenav() {
   document.getElementById("logout").hidden = false;
   document.getElementById("content").style.marginLeft = "200px";
   document.getElementById("navclose").hidden = false;
+  document.getElementById("opennavs").hidden = true;
 }
 function closeNav() {
   document.getElementById("sidenav").style.width = "60px";
@@ -20,6 +21,7 @@ function closeNav() {
   document.getElementById("logout").hidden = true;
   document.getElementById("content").style.marginLeft = "5px";
   document.getElementById("navclose").hidden = true;
+  document.getElementById("opennavs").hidden = false;
 }
 // ------------------------------END sidenav function---------------------------
 
@@ -30,8 +32,18 @@ function checkscreen() {
   if (w <= 576) {
     document.getElementById("bodystyle").style.paddingLeft = "0px";
     document.getElementById("bodystyle").style.paddingRight = "0px";
+    document.getElementById("projectname").hidden = true;
     document.getElementById("projectname").innerHTML = 'ประเมินผล การบริหารร้าน'+'<br>'+' 7-Eleven'
     document.getElementById("projectname").style.fontSize= '1.2rem';
+  }
+  if (w > 576 && w <=820) {
+    document.getElementById("sidenav").style.paddingTop = "125px";
+    document.getElementById("bodystyle").style.paddingTop = "130px";
+    document.getElementById("bodystyle").style.paddingLeft = "70px";
+    document.getElementById("bodystyle").style.paddingRight = "10px";
+    document.getElementById("bodystyle").style.width = '100%';   
+    document.getElementById("projectname").innerHTML = "ประเมินผล การบริหารร้าน 7-Eleven";
+    document.getElementById("projectname").style.fontSize = "1.8rem";
   }
 }
 // ------------------------------------ END ScreenCheck --------------------------------
@@ -69,9 +81,63 @@ var FBP = [
   "3.5  ความร่วมมือในการประชุมกับทีม OPT",
   "3.6  ไม่เคยได้รับหนังสือขอความร่วมมือ",
 ];
+var branch = [
+  {
+    id : '2119',
+    name :'สถานีรถไฟเชียงใหม',
+    status : 1
+  },
+  {
+    id : '2789',
+    name :'กาดอินทร',
+    status : 1
+  },
+  {
+    id : '3119',
+    name :'ศิริมังคลาจารย์',
+    status : 0
+  },
+  {
+    id : '3189',
+    name :'อบต.สุเทพ',
+    status : 1
+  },
+  {
+    id : '4059',
+    name :'ไชยปราการ',
+    status : 0
+  },
+  {
+    id : '4301',
+    name :'กาดอินทร 2',
+    status : 1
+  },
+  {
+    id : '5093',
+    name :'ศรีปิงเมือง 2',
+    status : 0
+  },
+  {
+    id : '5094',
+    name :'ศรีดอนไชย1',
+    status : 0
+  },
+  {
+    id : '5147',
+    name :'ตลาดแม่กวง',	
+    status : 1
+  },
+]
 // ------------------------------------ END DataSet --------------------------------
 
 // ------------------------------------ Show Form TD --------------------------------
+var bcheck = localStorage.getItem('bcheck')
+for(var b = 0 ; b < branch.length; b++){
+  if(bcheck == branch[b].id){
+    document.getElementById('showbdetail').innerHTML = 'ร้านสาขาที่ : ' + branch[b].id + ' ' + branch[b].name
+  }
+}
+
 FBP.map((FBPList, index) => {
   var table = document.getElementById("FBPForm");
   var row = table.insertRow(-1);

@@ -1,15 +1,16 @@
 /* -----------sidenav style---------- */
 #bodystyle {
     background-color: #E3E3E3;
-    font-family: 'Kanit', sans-serif;
   }
+  
   .navbar {
     background-color: white;
     height: 10%;
   }
-  #projectname{
-      font-size: 1.8rem;
-      text-align: center;
+  
+  #projectname {
+    font-size: 1.8rem;
+    text-align: center;
   }
   #sidenav {
     height: 100%;
@@ -32,14 +33,16 @@
     transition: 0.5s;
   }
   #sidenav label:hover {
-      color: red;
-    }
+    color: red;
+  }
   #sidenav span:hover {
-      color: red;
-    }
+    color: red;
+  }
+  
   #sidenav span {
     color: black;
   }
+  
   #sidenav label {
     font-size: 1rem;
     color: black;
@@ -52,9 +55,11 @@
     border-style: solid;
     border-radius: 10px;
   }
+  
   #offcanvasNavbar {
     width: 60%;
   }
+  
   #offcanvasNavbar a {
     padding: 8px 8px 8px 20px;
     text-decoration: none;
@@ -63,50 +68,67 @@
     display: block;
     transition: 0.3s;
   }
+  
   #offcanvasNavbar span {
     color: black;
   }
+  
   #offcanvasNavbar label {
     font-size: 1rem;
     color: black;
   }
+  
   /* ----------- End sidenav style---------- */
   
-  /* -----------body style---------- */
+  /* ----------- body style---------- */
   body {
     padding-top: 100px;
+    padding-bottom: 20px;
     transition: margin-left 0.5s;
     padding-left: 80px;
     padding-right: 40px;
   }
+  
   #content {
-    background-color: white;
-    transition: margin-left 0.5s;
-    padding: 2%;
+    transition: margin-left .5s;
+    margin-left: 5px;
     border-radius: 25px;
+    background-color: white;
+    height: 100%;
+    padding: 2%;
+    width: 100%;
+    overflow: auto;
   }
-  .setting{
-    margin-top: 2%;
+  #resultselect{
+    float: right;
+    margin-bottom: 1%;
   }
-  .header {
+  #totalcheck{
+    align-items: center;
     text-align: center;
   }
-  #settingcollapse{
-    width: 100%;
+  .header{
+    text-align: center;
     margin-bottom: 2%;
   }
-  #configsubmit{
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 100%;
-  } 
+  #totalcheck{
+    text-align: center;
+  }
+  #totalcheck tr:hover {
+    background-color: #EDEDED;
+  }
+  #quarter label{
+    margin-right: 2%;
+  }
   .form-check-input{
-    font-size: 2rem
+    font-size: 1.3rem;
   }
-  #addlistbtn{
-    margin-left: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
+  #month{
+    margin-top: 2%;
   }
-  /* ----------- End body style---------- */
-  
+  #monthheader{
+    font-size: 1.2rem;
+  }
+  #quarterhead{
+    font-size: 1.2rem;
+  }

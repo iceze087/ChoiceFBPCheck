@@ -6,6 +6,7 @@ function sidenav() {
   document.getElementById("logout").hidden = false;
   document.getElementById("content").style.marginLeft = "200px";
   document.getElementById("navclose").hidden = false;
+  document.getElementById("opennavs").hidden = true;
 }
 function closeNav() {
   document.getElementById("sidenav").style.width = "60px";
@@ -14,6 +15,7 @@ function closeNav() {
   document.getElementById("logout").hidden = true;
   document.getElementById("content").style.marginLeft = "5px";
   document.getElementById("navclose").hidden = true;
+  document.getElementById("opennavs").hidden = false;
 }
 // ------------------------------END sidenav function---------------------------
 
@@ -24,9 +26,19 @@ function checkscreen() {
   if (w <= 576) {
     document.getElementById("bodystyle").style.paddingLeft = "0px";
     document.getElementById("bodystyle").style.paddingRight = "0px";
+    document.getElementById("projectname").hidden = true;
     document.getElementById("projectname").innerHTML =
       "ประเมินผล การบริหารร้าน" + "<br>" + " 7-Eleven";
     document.getElementById("projectname").style.fontSize = "1.2rem";
+  }
+  if (w > 576 && w <=820) {
+    document.getElementById("sidenav").style.paddingTop = "125px";
+    document.getElementById("bodystyle").style.paddingTop = "130px";
+    document.getElementById("bodystyle").style.paddingLeft = "70px";
+    document.getElementById("bodystyle").style.paddingRight = "10px";
+    document.getElementById("bodystyle").style.width = '100%';   
+    document.getElementById("projectname").innerHTML = "ประเมินผล การบริหารร้าน 7-Eleven";
+    document.getElementById("projectname").style.fontSize = "1.8rem";
   }
 }
 
@@ -75,67 +87,126 @@ var Audit = ["ความร่วมมือในการเข้าร่
 // ------------------------------------ END DataSet --------------------------------
 
 // ------------------------------------ Show Form TD --------------------------------
-FBP.map((FBPList, index) => {
-  var table = document.getElementById("FBPConfig");
-  var row = table.insertRow(-1);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  var cell3 = row.insertCell(2);
-  cell1.innerHTML = FBPList;
-  cell2.innerHTML =
-    ' <input class="form-check-input" type="checkbox" value="" name="' +
-    FBPList +
-    '" id="' +
-    FBPList +
-    '">';
-  cell3.innerHTML =
-    '<input type="number" class="form-control" step="0.1" name="' +
-    FBPList +
-    '" id="' +
-    FBPList +
-    '">';
-});
+runfbp();
+runaccount();
+runaudit();
 
-Account.map((AccountList, index) => {
-  var table = document.getElementById("AccountConfig");
-  var row = table.insertRow(-1);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  var cell3 = row.insertCell(2);
-  cell1.innerHTML = AccountList;
-  cell2.innerHTML =
-    ' <input class="form-check-input" type="checkbox" value="" name="' +
-    AccountList +
-    '" id="' +
-    AccountList +
-    '">';
-  cell3.innerHTML =
-    '<input type="number" class="form-control" step="0.1" name="' +
-    AccountList +
-    '" id="' +
-    AccountList +
-    '">';
-});
+function runfbp(){
+  FBP.map((FBPList, index) => {
+    var table = document.getElementById("FBPConfig");
+    var row = table.insertRow(-1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = FBPList;
+    cell2.innerHTML =
+      ' <input class="form-check-input" type="checkbox" value="" name="' +
+      FBPList +
+      '" id="' +
+      FBPList +
+      '">';
+    cell3.innerHTML =
+      '<input type="number" class="form-control" step="0.1" name="' +
+      FBPList +
+      '" id="' +
+      FBPList +
+      '">';
+  });
+}
 
-Audit.map((AuditList, index) => {
-  var table = document.getElementById("AuditConfig");
-  var row = table.insertRow(-1);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  var cell3 = row.insertCell(2);
-  cell1.innerHTML = AuditList;
-  cell2.innerHTML =
-    ' <input class="form-check-input" type="checkbox" value="" name="' +
-    AuditList +
-    '" id="' +
-    AuditList +
-    '">';
-  cell3.innerHTML =
-    '<input type="number" class="form-control" step="0.1" name="' +
-    AuditList +
-    '" id="' +
-    AuditList +
-    '">';
-});
+function runaccount(){
+  Account.map((AccountList, index) => {
+    var table = document.getElementById("AccountConfig");
+    var row = table.insertRow(-1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = AccountList;
+    cell2.innerHTML =
+      ' <input class="form-check-input" type="checkbox" value="" name="' +
+      AccountList +
+      '" id="' +
+      AccountList +
+      '">';
+    cell3.innerHTML =
+      '<input type="number" class="form-control" step="0.1" name="' +
+      AccountList +
+      '" id="' +
+      AccountList +
+      '">';
+  });
+}
+
+function runaudit(){
+  Audit.map((AuditList, index) => {
+    var table = document.getElementById("AuditConfig");
+    var row = table.insertRow(-1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = AuditList;
+    cell2.innerHTML =
+      ' <input class="form-check-input" type="checkbox" value="" name="' +
+      AuditList +
+      '" id="' +
+      AuditList +
+      '">';
+    cell3.innerHTML =
+      '<input type="number" class="form-control" step="0.1" name="' +
+      AuditList +
+      '" id="' +
+      AuditList +
+      '">';
+  });
+}
+
 
 // ------------------------------------ END Show Form TD --------------------------------
+
+// ------------------------------------ Addlist --------------------------------
+var sectionselect
+var adddetail
+function addlist(){
+  sectionselect = document.getElementById('sectionselect').value;
+  adddetail = document.getElementById('adddetail').value;
+}
+function commitadd(){
+  if(sectionselect == 'SBP' && adddetail != ''){
+    FBP.push(adddetail);
+    document.getElementById('FBPConfig').innerHTML = '';
+    runfbp();
+    Swal.fire(
+      'เพิ่มรายการสำเร็จ',
+      '',
+      'success'
+    )
+  }
+  else if(sectionselect == 'Account' && adddetail != ''){
+    Account.push(adddetail);
+    document.getElementById('AccountConfig').innerHTML = '';
+    runaccount();
+    Swal.fire(
+      'เพิ่มรายการสำเร็จ',
+      '',
+      'success'
+    )
+  }
+  else if(sectionselect == 'Audit' && adddetail != ''){
+    Audit.push(adddetail);
+    document.getElementById('AuditConfig').innerHTML = '';
+    runaudit();
+    Swal.fire(
+      'เพิ่มรายการสำเร็จ',
+      '',
+      'success'
+    )
+  }
+  else{
+    Swal.fire(
+      'กรุณาเลือกหัวข้อ หรือเพิ่มรายละเอียด',
+      '',
+      'error'
+    )
+  }
+}
+// ------------------------------------ END Addlist --------------------------------
