@@ -58,32 +58,104 @@ var FBP = [
   // "1.12 QSSI - สินค้าขาดจากร้านเฉลี่ย/เดือน",
   // "1.13 QSSI - หมวด Follow Up",
   // "1.14 จำนวนCR เฉพาะหมวดบริการ",
-  "2.1  อัตรากำลังคนรวมครบตามโครงสร้าง",
-  "2.2  จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน",
-  "2.3  จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน",
-  "2.4  การบริหารจัดการและการดูแลทีมงานในร้าน",
-  "2.5  จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม",
-  "2.6  ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน",
-  "2.7  ส่งสำเนาทะเบียนลูกจ้าง",
-  "3.1  การดูแลมาตราฐานร้านอย่างสม่ำเสมอ",
-  "3.2  การให้ความร่วมมือในการบริหารงานขายต่าง ๆ",
-  "3.3  การสั่งสินค้าผ่านระบบ Online",
-  "3.4  การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท",
-  "3.5  ความร่วมมือในการประชุมกับทีม OPT",
-  "3.6  ไม่เคยได้รับหนังสือขอความร่วมมือ",
+  {
+    name : "2.1 อัตรากำลังคนรวมครบตามโครงสร้าง",
+    score : 40 
+  },
+  {
+    name : "2.2 จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน",
+    score : 20
+  },
+  {
+    name : "2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน",
+    score : 20
+  },
+  {
+    name : "2.4 การบริหารจัดการและการดูแลทีมงานในร้าน",
+    score : 20
+  },
+  {
+    name : "2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม",
+    score : 10
+  },
+  {
+    name : "2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน",
+    score : 15
+  },
+  {
+    name : "2.7 ส่งสำเนาทะเบียนลูกจ้าง",
+    score : 10
+  },
+  {
+    name : "3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ",
+    score : 15
+  },
+  {
+    name : "3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ",
+    score : 15
+  },
+  {
+    name : "3.3 การสั่งสินค้าผ่านระบบ Online",
+    score : 10
+  },
+  {
+    name : "3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท",
+    score : 10
+  },
+  {
+    name : "3.5 ความร่วมมือในการประชุมกับทีม OPT",
+    score : 20
+  },
+  {
+    name : "3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ",
+    score : 30
+  },
+  
 ];
 var Account = [
-  "1.1 การ Online  Receiving log",
-  "1.2 การ Online Cash Report",
-  "1.3 การจัดส่งเอกสาร Receiving Log",
-  "1.4 การคีย์ข้อมูล Receiving Log",
-  "1.5 การคีย์ข้อมูล Mark up / Down",
-  "2.1 ความร่วมมือในการตรวจนับเงินสด",
-  "2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด",
-  "2.3 ความร่วมมือในการตรวจนับสินค้า",
-  "3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.",
+  {
+    name : "1.1 การ Online  Receiving log",
+    score : 5
+  },
+  {
+    name : "1.2 การ Online Cash Report",
+    score : 5
+  },
+  {
+    name : "1.3 การจัดส่งเอกสาร Receiving Log",
+    score : 5
+  },
+  {
+    name : "1.4 การคีย์ข้อมูล Receiving Log",
+    score : 5
+  },
+  {
+    name : "1.5 การคีย์ข้อมูล Mark up / Down",
+    score : 5
+  },
+  {
+    name : "2.1 ความร่วมมือในการตรวจนับเงินสด",
+    score : 5
+  },
+  {
+    name : "2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด",
+    score : 5
+  },
+  {
+    name : "2.3 ความร่วมมือในการตรวจนับสินค้า",
+    score : 15
+  },
+  {
+    name : "3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.",
+    score : 10
+  },
 ];
-var Audit = ["ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท"];
+var Audit = [
+  {
+    name : "ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท",
+    score : 10
+  }
+];
 // ------------------------------------ END DataSet --------------------------------
 
 // ------------------------------------ Show Form TD --------------------------------
@@ -98,18 +170,27 @@ function runfbp(){
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
-    cell1.innerHTML = FBPList;
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    cell1.innerHTML = FBP[index].name;
     cell2.innerHTML =
       ' <input class="form-check-input" type="checkbox" value="" name="' +
-      FBPList +
+      FBP[index].name +
       '" id="' +
-      FBPList +
+      FBP[index].name +
       '">';
-    cell3.innerHTML =
+    cell3.innerHTML = FBP[index].score; 
+    cell4.innerHTML =
       '<input type="number" class="form-control" step="0.1" name="' +
-      FBPList +
+      FBP[index].name +
       '" id="' +
-      FBPList +
+      FBP[index].name +
+      '">';
+    cell5.innerHTML =
+      '<input type="number" class="form-control" step="0.1" name="' +
+      FBP[index].name +
+      '" id="' +
+      FBP[index].name +
       '">';
   });
 }
@@ -121,18 +202,27 @@ function runaccount(){
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
-    cell1.innerHTML = AccountList;
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    cell1.innerHTML = Account[index].name;
     cell2.innerHTML =
       ' <input class="form-check-input" type="checkbox" value="" name="' +
-      AccountList +
+      Account[index].name +
       '" id="' +
-      AccountList +
+      Account[index].name +
       '">';
-    cell3.innerHTML =
+    cell3.innerHTML = Account[index].score; 
+    cell4.innerHTML =
       '<input type="number" class="form-control" step="0.1" name="' +
-      AccountList +
+      Account[index].name +
       '" id="' +
-      AccountList +
+      Account[index].name +
+      '">';
+    cell5.innerHTML =
+      '<input type="number" class="form-control" step="0.1" name="' +
+      Account[index].name +
+      '" id="' +
+      Account[index].name +
       '">';
   });
 }
@@ -144,18 +234,27 @@ function runaudit(){
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
-    cell1.innerHTML = AuditList;
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    cell1.innerHTML = Audit[index].name;
     cell2.innerHTML =
       ' <input class="form-check-input" type="checkbox" value="" name="' +
-      AuditList +
+      Audit[index].name +
       '" id="' +
-      AuditList +
+      Audit[index].name +
       '">';
-    cell3.innerHTML =
+    cell3.innerHTML = Audit[index].score; 
+    cell4.innerHTML =
       '<input type="number" class="form-control" step="0.1" name="' +
-      AuditList +
+      Audit[index].name +
       '" id="' +
-      AuditList +
+      Audit[index].name +
+      '">';
+    cell5.innerHTML =
+      '<input type="number" class="form-control" step="0.1" name="' +
+      Audit[index].name +
+      '" id="' +
+      Audit[index].name +
       '">';
   });
 }
@@ -169,10 +268,11 @@ var adddetail
 function addlist(){
   sectionselect = document.getElementById('sectionselect').value;
   adddetail = document.getElementById('adddetail').value;
+  scoredetail = document.getElementById('scoredetail').value;
 }
 function commitadd(){
   if(sectionselect == 'SBP' && adddetail != ''){
-    FBP.push(adddetail);
+    FBP.push({name :adddetail, score : scoredetail});
     document.getElementById('FBPConfig').innerHTML = '';
     runfbp();
     Swal.fire(
@@ -182,7 +282,7 @@ function commitadd(){
     )
   }
   else if(sectionselect == 'Account' && adddetail != ''){
-    Account.push(adddetail);
+    Account.push({name :adddetail, score : scoredetail});
     document.getElementById('AccountConfig').innerHTML = '';
     runaccount();
     Swal.fire(
@@ -192,7 +292,7 @@ function commitadd(){
     )
   }
   else if(sectionselect == 'Audit' && adddetail != ''){
-    Audit.push(adddetail);
+    Audit.push({name :adddetail, score : scoredetail});
     document.getElementById('AuditConfig').innerHTML = '';
     runaudit();
     Swal.fire(

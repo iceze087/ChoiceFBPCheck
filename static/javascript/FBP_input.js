@@ -35,6 +35,7 @@ function checkscreen() {
     document.getElementById("projectname").hidden = true;
     document.getElementById("projectname").innerHTML = 'ประเมินผล การบริหารร้าน'+'<br>'+' 7-Eleven'
     document.getElementById("projectname").style.fontSize= '1.2rem';
+    document.getElementById("h1").style.width = '58%'; 
   }
   if (w > 576 && w <=820) {
     document.getElementById("sidenav").style.paddingTop = "125px";
@@ -155,11 +156,7 @@ FBP.map((FBPList, index) => {
   else{
     cell1.innerHTML = FBPList;
     cell2.innerHTML =
-      '<input type="number" class="form-control" step="0.1" name="' +
-      FBPList +
-      '" id="' +
-      FBPList +
-      '">';
+      '<input  class="form-check-input" type="radio" value="" style="font-size: 1.8rem; margin-right: 10%; border-color: black;" name="' + FBPList +'" id="' +FBPList +'"><input  class="form-check-input" type="radio" style="font-size: 1.8rem; margin-right: 10%; border-color: black;" value=""  name="' + FBPList +'" id="' +FBPList +'"><input  class="form-check-input" type="radio" style="font-size: 1.8rem; border-color: black;"  value=""  name="' + FBPList +'" id="' +FBPList +'">';
   }
 });
 
