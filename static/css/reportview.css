@@ -1,0 +1,14 @@
+body{
+    padding-top: 3%;
+    font-family: 'Sarabun', sans-serif;
+}
+.header{
+    text-align: center;
+    font-family: 'Sarabun', sans-serif;
+}
+table{
+    padding-left: 3%;
+    padding-right: 3%;
+    border-color: black;
+    font-family: 'Sarabun', sans-serif;
+}

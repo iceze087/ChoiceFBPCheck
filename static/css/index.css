@@ -5,13 +5,14 @@
 }
 
 .navbar {
-  background-color: white;
+  background-color: #3C6255;
   height: 10%;
 }
 
 #projectname {
   font-size: 1.8rem;
   text-align: center;
+  color: white;
 }
 
 #sidenav {
@@ -20,7 +21,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: #3C6255;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 90px;
@@ -30,7 +31,7 @@
   padding: 0px 8px 0px 20px;
   text-decoration: none;
   font-size: 1rem;
-  color: black;
+  color: white;
   display: block;
   transition: 0.5s;
 }
@@ -42,12 +43,12 @@
 }
 
 #sidenav span {
-  color: black;
+  color: white;
 }
 
 #sidenav label {
   font-size: 1.2rem;
-  color: black;
+  color: white;
 }
 #userbtn{
   border-radius: 25px;
@@ -60,27 +61,36 @@
 }
 
 #offcanvasNavbar {
-  width: 60%;
+  width: 65%;
+  background-color: #3C6255;
 }
 
 #offcanvasNavbar a {
-  padding: 8px 8px 8px 20px;
+  padding: 0px 3px 0px 20px;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1rem;
   color: black;
   display: block;
   transition: 0.3s;
 }
 
 #offcanvasNavbar span {
+  font-size: 2rem;
   color: black;
 }
 
 #offcanvasNavbar label {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: black;
 }
 
+.offcanvas-body{
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  margin-right: 3%;
+  margin-left: 3%;
+}
 /* ----------- End sidenav style---------- */
 
 /* -----------body style---------- */

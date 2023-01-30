@@ -165,7 +165,8 @@ runaudit();
 
 function runfbp(){
   FBP.map((FBPList, index) => {
-    var table = document.getElementById("FBPConfig");
+    if(index == 0){
+      var table = document.getElementById("FBPConfig");
     var row = table.insertRow(-1);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
@@ -192,38 +193,89 @@ function runfbp(){
       '" id="' +
       FBP[index].name +
       '">';
+    }
+    else{
+      var table = document.getElementById("FBPConfig");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      cell1.innerHTML = FBP[index].name;
+      cell2.innerHTML =
+        ' <input class="form-check-input" type="checkbox" value="" name="' +
+        FBP[index].name +
+        '" id="' +
+        FBP[index].name +
+        '">';
+      cell3.innerHTML = FBP[index].score; 
+      cell4.innerHTML =
+        '<input type="number" class="form-control" step="0.1" name="' +
+        FBP[index].name +
+        '" id="' +
+        FBP[index].name +
+        '">';
+      cell5.innerHTML = ''
+    }
   });
 }
 
 function runaccount(){
   Account.map((AccountList, index) => {
-    var table = document.getElementById("AccountConfig");
-    var row = table.insertRow(-1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);
-    cell1.innerHTML = Account[index].name;
-    cell2.innerHTML =
-      ' <input class="form-check-input" type="checkbox" value="" name="' +
-      Account[index].name +
-      '" id="' +
-      Account[index].name +
-      '">';
-    cell3.innerHTML = Account[index].score; 
-    cell4.innerHTML =
-      '<input type="number" class="form-control" step="0.1" name="' +
-      Account[index].name +
-      '" id="' +
-      Account[index].name +
-      '">';
-    cell5.innerHTML =
-      '<input type="number" class="form-control" step="0.1" name="' +
-      Account[index].name +
-      '" id="' +
-      Account[index].name +
-      '">';
+    if(index == 0){
+      var table = document.getElementById("AccountConfig");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      cell1.innerHTML = Account[index].name;
+      cell2.innerHTML =
+        ' <input class="form-check-input" type="checkbox" value="" name="' +
+        Account[index].name +
+        '" id="' +
+        Account[index].name +
+        '">';
+      cell3.innerHTML = Account[index].score; 
+      cell4.innerHTML =
+        '<input type="number" class="form-control" step="0.1" name="' +
+        Account[index].name +
+        '" id="' +
+        Account[index].name +
+        '">';
+      cell5.innerHTML =
+        '<input type="number" class="form-control" step="0.1" name="' +
+        Account[index].name +
+        '" id="' +
+        Account[index].name +
+        '">';
+    }
+    else{
+      var table = document.getElementById("AccountConfig");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      cell1.innerHTML = Account[index].name;
+      cell2.innerHTML =
+        ' <input class="form-check-input" type="checkbox" value="" name="' +
+        Account[index].name +
+        '" id="' +
+        Account[index].name +
+        '">';
+      cell3.innerHTML = Account[index].score; 
+      cell4.innerHTML =
+        '<input type="number" class="form-control" step="0.1" name="' +
+        Account[index].name +
+        '" id="' +
+        Account[index].name +
+        '">';
+      cell5.innerHTML = ''
+    }
   });
 }
 

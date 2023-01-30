@@ -34,18 +34,19 @@
             <a class="navbar-brand" href="./index.html"><img src="../static/image/choice-lg.png" style="height: 50px;"
                     alt=""></a>
             <label id="projectname">ประเมินผล การบริหารร้าน 7-Eleven ของแฟรนไชส์</label>
-            <button type="button" class="btn" style="background-color: #EDEDED;" id="userbtn"><label
+            <button type="button" class="btn" style="background-color: white;" id="userbtn"><label
                     class="d-flex justify-content-center" for="" style="font-size: 1.2rem;"><span
                         class="material-symbols-outlined" style="font-size: 2rem;">account_box</span>&nbsp; : &nbsp;
                     Suttikaet</label></button>
+
             <button class="navbar-toggler d-xs-block d-sm-block d-md-none" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
+                <span class="material-symbols-outlined" style="color: white; font-size: 2rem;">grid_view</span>
             </button>
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <a class="navbar-brand" href="#"><img src="../static/image/choice-lg.png" style="height: 50px;"
+                    <a class="navbar-brand" href="./index.html"><img src="../static/image/choice-lg.png" style="height: 50px;"
                             alt=""></a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -56,11 +57,13 @@
                                     class="material-symbols-outlined">home</span>&nbsp;<label
                                     for="">หน้าหลัก</label></a>
                         </li>
+                        <hr>
                         <li class="nav-item">
                             <a class="d-flex align-items-center" href="./Formconfix.html" style="display: flex;"><span
                                     class="material-symbols-outlined">settings</span>&nbsp;<label
                                     for="">ตั้งค่า</label></a>
                         </li>
+                        <hr>
                         <li class="nav-item">
                             <a class="d-flex align-items-center" href="./login.html" style="display: flex;"><span
                                     class="material-symbols-outlined">logout</span>&nbsp;<label
@@ -71,11 +74,12 @@
             </div>
         </div>
     </nav>
-    <div class="border border-white d-none d-sm-none d-md-block" id="sidenav">
+    <div class="d-none d-sm-none d-md-block" id="sidenav">
         <a href="javascript:void(0)" id="navclose" onclick="closeNav()" style="margin-left: 130px;" hidden><span
                 class="material-symbols-outlined" id="btnclose">first_page</span></a>
-        <a id="opennavs" onclick="sidenav()" style="font-size: 2rem;"><span
-                class="material-symbols-outlined">open_in_new</span></a>
+
+        <a id="opennavs" onclick="sidenav()" style="font-size: 2rem;"><span class="material-symbols-outlined">open_in_new</span></a>
+
         <hr>
         <a class="d-flex align-items-center" href="./index.html" style="display: flex;"><span
                 class="material-symbols-outlined">home</span>&nbsp;<label for="" id="homepage"
@@ -113,7 +117,7 @@
             </tbody>
         </table>
     </div>
-
+    
     <!-- Modal -->
     <div class="modal fade" id="configview" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">

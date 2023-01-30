@@ -441,7 +441,7 @@ function rundata(){
             cell5.innerHTML += '<span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span>'
         }
         if(branch[i].sbpstatus == 1&& branch[i].accountstatus == 1 && branch[i].auditstatus == 1){
-            cell6.innerHTML += '<button type="button" class="btn btn-primary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button>'
+            cell6.innerHTML += '<a href="./reportview.html" target="_blank"><button type="button" class="btn btn-primary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a>'
         }
         else{
             cell6.innerHTML += '<button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button>'

@@ -1,84 +1,189 @@
 /* -----------sidenav style---------- */
 #bodystyle {
-    background-color: #E3E3E3;
-  }
+  background-color: #E3E3E3;
+  font-family: 'Kanit', sans-serif;
+}
+
+.navbar {
+  background-color: white;
+  height: 10%;
+}
+
+#projectname {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#sidenav {
+  height: 100%;
+  width: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 90px;
+}
+
+#sidenav a {
+  padding: 0px 8px 0px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+  display: block;
+  transition: 0.5s;
+}
+#sidenav label:hover {
+  color: red;
+}
+#sidenav span:hover {
+  color: red;
+}
+
+#sidenav span {
+  color: black;
+}
+
+#sidenav label {
+  font-size: 1.2rem;
+  color: black;
+}
+#userbtn{
+  border-radius: 25px;
+}
+
+#btnclose {
+  font-size: 1.8rem;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#offcanvasNavbar {
+  width: 60%;
+}
+
+#offcanvasNavbar a {
+  padding: 0px 3px 0px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+#offcanvasNavbar span {
+  font-size: 2rem;
+  color: white;
+}
+
+#offcanvasNavbar label {
+  font-size: 1.2rem;
+  color: white;
+}
+.offcanvas-body{
+  background-color: #161f2c;
+  color: white;
+  border-radius: 25px;
+  margin-right: 3%;
+  margin-left: 3%;
+}
   
-  .navbar {
-    background-color: white;
-    height: 10%;
-  }
-  
-  #projectname {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  #sidenav {
-    height: 100%;
-    width: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 90px;
-  }
-  
-  #sidenav a {
-    padding: 0px 8px 0px 20px;
-    text-decoration: none;
-    font-size: 1rem;
-    color: black;
-    display: block;
-    transition: 0.5s;
-  }
-  #sidenav label:hover {
-    color: red;
-  }
-  #sidenav span:hover {
-    color: red;
-  }
-  
-  #sidenav span {
-    color: black;
-  }
-  
-  #sidenav label {
-    font-size: 1rem;
-    color: black;
-  }
-  #userbtn{
-    border-radius: 25px;
-  }
-  #btnclose {
-    font-size: 1.8rem;
-    border-style: solid;
-    border-radius: 10px;
-  }
-  
-  #offcanvasNavbar {
-    width: 60%;
-  }
-  
-  #offcanvasNavbar a {
-    padding: 8px 8px 8px 20px;
-    text-decoration: none;
-    font-size: 2rem;
-    color: black;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  #offcanvasNavbar span {
-    color: black;
-  }
-  
-  #offcanvasNavbar label {
-    font-size: 1rem;
-    color: black;
-  }
-  
-  /* ----------- End sidenav style---------- */
+  /* ----------- End sidenav style---------- *//* -----------sidenav style---------- */
+#bodystyle {
+  background-color: #E3E3E3;
+  font-family: 'Kanit', sans-serif;
+}
+
+.navbar {
+  background-color: #3C6255;
+  height: 10%;
+}
+
+#projectname {
+  font-size: 1.8rem;
+  text-align: center;
+  color: white;
+}
+
+#sidenav {
+  height: 100%;
+  width: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #3C6255;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 90px;
+}
+
+#sidenav a {
+  padding: 0px 8px 0px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  display: block;
+  transition: 0.5s;
+}
+#sidenav label:hover {
+  color: red;
+}
+#sidenav span:hover {
+  color: red;
+}
+
+#sidenav span {
+  color: white;
+}
+
+#sidenav label {
+  font-size: 1.2rem;
+  color: white;
+}
+#userbtn{
+  border-radius: 25px;
+}
+
+#btnclose {
+  font-size: 1.8rem;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#offcanvasNavbar {
+  width: 65%;
+  background-color: #3C6255;
+}
+
+#offcanvasNavbar a {
+  padding: 0px 3px 0px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+#offcanvasNavbar span {
+  font-size: 2rem;
+  color: black;
+}
+
+#offcanvasNavbar label {
+  font-size: 1.3rem;
+  color: black;
+}
+
+.offcanvas-body{
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+/* ----------- End sidenav style---------- */
+
   
   /* ----------- body style---------- */
   body {
