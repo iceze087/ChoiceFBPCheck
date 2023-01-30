@@ -116,9 +116,8 @@
                                 <tr>
                                     <th scope="col">หัวข้อ</th>
                                     <th scope="col">การใช้งาน</th>
-                                    <th scope="col">คะแนนเดิม</th>
+                                    <th scope="col">คะแนน</th>
                                     <th scope="col">แก้ไขคะแนน</th>
-                                    <th scope="col">ช่วงคะแนน</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -140,9 +139,8 @@
                                 <tr>
                                     <th scope="col">หัวข้อ</th>
                                     <th scope="col">การใช้งาน</th>
-                                    <th scope="col">คะแนนเดิม</th>
+                                    <th scope="col">คะแนน</th>
                                     <th scope="col">แก้ไขคะแนน</th>
-                                    <th scope="col">ช่วงคะแนน</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -164,9 +162,8 @@
                                 <tr>
                                     <th scope="col">หัวข้อ</th>
                                     <th scope="col">การใช้งาน</th>
-                                    <th scope="col">คะแนนเดิม</th>
+                                    <th scope="col">คะแนน</th>
                                     <th scope="col">แก้ไขคะแนน</th>
-                                    <th scope="col">ช่วงคะแนน</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -207,6 +204,30 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
                     <button type="button" class="btn btn-primary" onclick="commitadd()">เพิ่ม</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editscore" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center"
+                        id="exampleModalLabel"><p id="scoreheader"></p></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <label for="" class="form-label">คะแนนใหม่</label>
+                        <input type="number" class="form-control" id="score" step=".01" onkeyup="getnewscore()">
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" onchange="getnewscore()">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                    <button type="button" class="btn btn-primary" onclick="commitedit()">บันทึก</button>
                 </div>
                 </form>
             </div>

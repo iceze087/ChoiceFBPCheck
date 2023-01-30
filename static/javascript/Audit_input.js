@@ -51,7 +51,13 @@ function checkscreen() {
 // ------------------------------------ END ScreenCheck --------------------------------
 
 // ------------------------------------ DataSet --------------------------------
-var Audit = ["ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท"];
+var Audit = [
+  {
+    name : "ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท",
+    id : 'a1',
+    range : 5
+  }
+];
 var branch = [
   {
     id : '2119',
@@ -114,8 +120,15 @@ Audit.map((AuditList, index) => {
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
 
-  cell1.innerHTML = AuditList;
-  cell2.innerHTML = '<input  class="form-check-input" type="radio" value="" style="font-size: 1.8rem; margin-right: 10%; border-color: black;" name="' + AuditList +'" id="' +AuditList +'"><input  class="form-check-input" type="radio" style="font-size: 1.8rem; margin-right: 10%; border-color: black;" value=""  name="' + AuditList +'" id="' +AuditList +'"><input  class="form-check-input" type="radio" style="font-size: 1.8rem; border-color: black;"  value=""  name="' + AuditList +'" id="' +AuditList +'">';
+  cell1.innerHTML = Audit[index].name;
+  cell2.innerHTML = '<div class="scoretag"><label id="' +Audit[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + Audit[index].range + '" id="' + Audit[index].name + '" onchange="showvalue('+'\''+Audit[index].id+'\''+', id)">';
 });
 
 // ------------------------------------ END Show Form TD --------------------------------
+function showvalue(id , name){
+  const range = document.getElementById(name);
+  const rangeValue = document.getElementById(id);
+  var total = range.value
+  rangeValue.innerHTML = total + " "+ "คะแนน";
+
+}

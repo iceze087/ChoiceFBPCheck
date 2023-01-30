@@ -139,5 +139,11 @@
   #AuditConfig input{
     border-color: black;
   }
+  #editscore{
+    font-size: 1.2rem;
+  }
+  #editscore p{
+    font-size: 1.5rem;
+  }
   /* ----------- End body style---------- */
   

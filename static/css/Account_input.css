@@ -119,3 +119,13 @@ body {
   color: red;
 }
 /* ----------- End body style---------- */
+.range-value {
+  text-align: center;
+  background-color: #3C6255;
+  color: white;
+  width: 90px;
+  border-radius: 20px;
+}
+.scoretag{
+  text-align: center;
+}

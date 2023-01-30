@@ -52,18 +52,66 @@ function checkscreen() {
 
 // ------------------------------------ DataSet --------------------------------
 var Account = [
-  "ความร่วมมือในการส่งข้อมูล (25 คะแนน)",
-  "1.1 การ Online  Receiving log",
-  "1.2 การ Online Cash Report",
-  "1.3 การจัดส่งเอกสาร Receiving Log",
-  "1.4 การคีย์ข้อมูล Receiving Log",
-  "1.5 การคีย์ข้อมูล Mark up / Down",
-  "ความร่วมมือกับเจ้าหน้าที่ตรวจนับ(25 คะแนน)",
-  "2.1 ความร่วมมือในการตรวจนับเงินสด",
-  "2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด",
-  "2.3 ความร่วมมือในการตรวจนับสินค้า",
-  "ความร่วมมือในการนำเงินฝาก(10 คะแนน)",
-  "3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.",
+  {
+    name : "ความร่วมมือในการส่งข้อมูล (25 คะแนน)",
+    id : 'a1',
+    range : 5
+  },
+  {
+    name : "1.1 การ Online  Receiving log",
+    id : 'a2',
+    range : 3
+  },
+  {
+    name : "1.2 การ Online Cash Report",
+    id : 'a3',
+    range : 5
+  },
+  {
+    name : "1.3 การจัดส่งเอกสาร Receiving Log",
+    id : 'a4',
+    range : 3
+  },
+  {
+    name : "1.4 การคีย์ข้อมูล Receiving Log",
+    id : 'a5',
+    range : 3
+  },
+  {
+    name : "1.5 การคีย์ข้อมูล Mark up / Down",
+    id : 'a6',
+    range : 5
+  },
+  {
+    name : "ความร่วมมือกับเจ้าหน้าที่ตรวจนับ(25 คะแนน)",
+    id : 'a7',
+    range : 3
+  },
+  {
+    name : "2.1 ความร่วมมือในการตรวจนับเงินสด",
+    id : 'a8',
+    range : 5
+  },
+  {
+    name : "2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด",
+    id : 'a9',
+    range : 3
+  },
+  {
+    name : "2.3 ความร่วมมือในการตรวจนับสินค้า",
+    id : 'a10',
+    range : 3
+  },
+  {
+    name : "ความร่วมมือในการนำเงินฝาก(10 คะแนน)",
+    id : 'a11',
+    range : 5
+  },
+  {
+    name : "3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.",
+    id : 'a12',
+    range : 5
+  },
 ];
 var branch = [
   {
@@ -126,17 +174,24 @@ Account.map((AccountListList, index) => {
   var row = table.insertRow(-1);
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
-  if (AccountListList == "ความร่วมมือในการส่งข้อมูล (25 คะแนน)") {
-    cell1.innerHTML = "<b>" + AccountListList + "</b>";
-  } else if (AccountListList == "ความร่วมมือกับเจ้าหน้าที่ตรวจนับ(25 คะแนน)") {
-    cell1.innerHTML = "<b>" + AccountListList + "</b>";
-  } else if (AccountListList == "ความร่วมมือในการนำเงินฝาก(10 คะแนน)") {
-    cell1.innerHTML = "<b>" + AccountListList + "</b>";
+  if (Account[index].name == "ความร่วมมือในการส่งข้อมูล (25 คะแนน)") {
+    cell1.innerHTML = "<b>" + Account[index].name + "</b>";
+  } else if (Account[index].name == "ความร่วมมือกับเจ้าหน้าที่ตรวจนับ(25 คะแนน)") {
+    cell1.innerHTML = "<b>" + Account[index].name + "</b>";
+  } else if (Account[index].name == "ความร่วมมือในการนำเงินฝาก(10 คะแนน)") {
+    cell1.innerHTML = "<b>" + Account[index].name + "</b>";
   }else {
-    cell1.innerHTML = AccountListList;
+    cell1.innerHTML = Account[index].name;
     cell2.innerHTML =
-    '<input  class="form-check-input" type="radio" value="" style="font-size: 1.8rem; margin-right: 10%; border-color: black;" name="' + AccountListList +'" id="' +AccountListList +'"><input  class="form-check-input" type="radio" style="font-size: 1.8rem; margin-right: 10%; border-color: black;" value=""  name="' + AccountListList +'" id="' +AccountListList +'"><input  class="form-check-input" type="radio" style="font-size: 1.8rem; border-color: black;"  value=""  name="' + AccountListList +'" id="' +AccountListList +'">';
+    '<div class="scoretag"><label id="' + Account[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + Account[index].range + '" id="' + Account[index].name + '" onchange="showvalue('+'\''+Account[index].id+'\''+', id)">';
 }
 });
 
 // ------------------------------------ END Show Form TD --------------------------------
+function showvalue(id , name){
+  const range = document.getElementById(name);
+  const rangeValue = document.getElementById(id);
+  var total = range.value
+  rangeValue.innerHTML = total + " "+ "คะแนน";
+
+}

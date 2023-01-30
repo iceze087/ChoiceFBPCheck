@@ -1,3 +1,4 @@
+
 // ------------------------------sidenav function------------------------------
 function sidenav() {
   document.getElementById("sidenav").style.width = "200px";
@@ -66,21 +67,81 @@ var FBP = [
   // "1.12 QSSI - สินค้าขาดจากร้านเฉลี่ย/เดือน",
   // "1.13 QSSI - หมวด Follow Up",
   // "1.14 จำนวนCR เฉพาะหมวดบริการ",
-  'การบริหารงานบุคคล ( 130 คะแนน )',
-  "2.1  อัตรากำลังคนรวมครบตามโครงสร้าง",
-  "2.2  จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน",
-  "2.3  จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน",
-  "2.4  การบริหารจัดการและการดูแลทีมงานในร้าน",
-  "2.5  จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม",
-  "2.6  ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน",
-  "2.7  ส่งสำเนาทะเบียนลูกจ้าง",
-  'ความร่วมมือและการเอาใจใส่บริหารที่ร้านสาขา (100 คะแนน)',
-  "3.1  การดูแลมาตราฐานร้านอย่างสม่ำเสมอ",
-  "3.2  การให้ความร่วมมือในการบริหารงานขายต่าง ๆ",
-  "3.3  การสั่งสินค้าผ่านระบบ Online",
-  "3.4  การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท",
-  "3.5  ความร่วมมือในการประชุมกับทีม OPT",
-  "3.6  ไม่เคยได้รับหนังสือขอความร่วมมือ",
+  {
+    name :'การบริหารงานบุคคล ( 130 คะแนน )',
+    id : 'f1',
+    range : 5
+  },
+  {
+    name :"2.1  อัตรากำลังคนรวมครบตามโครงสร้าง",
+    id : 'f2',
+    range : 5
+  }, 
+  {
+    name :"2.2  จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน",
+    id : 'f3',
+    range : 3
+  },
+  {
+    name :"2.3  จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน",
+    id : 'f4',
+    range : 5
+  },
+  {
+    name :"2.4  การบริหารจัดการและการดูแลทีมงานในร้าน",
+    id : 'f5',
+    range : 3
+  },
+  {
+    name :"2.5  จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม",
+    id : 'f6',
+    range : 3
+  },
+  {
+    name :"2.6  ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน",
+    id : 'f7',
+    range : 3
+  },
+  {
+    name :"2.7  ส่งสำเนาทะเบียนลูกจ้าง",
+    id : 'f8',
+    range : 5
+  },
+  {
+    name : 'ความร่วมมือและการเอาใจใส่บริหารที่ร้านสาขา (100 คะแนน)',
+    id : 'f9',
+    range : 5
+  },
+  {
+    name : "3.1  การดูแลมาตราฐานร้านอย่างสม่ำเสมอ",
+    id : 'f10',
+    range : 3
+  },
+  {
+    name : "3.2  การให้ความร่วมมือในการบริหารงานขายต่าง ๆ",
+    id : 'f11',
+    range : 5
+  },
+  {
+    name : "3.3  การสั่งสินค้าผ่านระบบ Online",
+    id : 'f12',
+    range : 5
+  },
+  {
+    name : "3.4  การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท",
+    id : 'f13',
+    range : 5
+  },
+  {
+    name : "3.5  ความร่วมมือในการประชุมกับทีม OPT",
+    id : 'f14',
+    range : 3
+  },
+  {
+    name : "3.6  ไม่เคยได้รับหนังสือขอความร่วมมือ",
+    id : 'f15',
+    range : 3
+  },
 ];
 var branch = [
   {
@@ -144,20 +205,27 @@ FBP.map((FBPList, index) => {
   var row = table.insertRow(-1);
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
-  if(FBPList == 'ผลการดำเนินงานประจำเดือน(3 เดือน) (290  คะแนน)'){
-    cell1.innerHTML = '<b>'+FBPList+'</b>';
+  if(FBP[index].name == 'ผลการดำเนินงานประจำเดือน(3 เดือน) (290  คะแนน)'){
+    cell1.innerHTML = '<b>'+FBP[index].name+'</b>';
   }
-  else if(FBPList == 'การบริหารงานบุคคล ( 130 คะแนน )'){
-    cell1.innerHTML = '<b>'+FBPList+'</b>';
+  else if(FBP[index].name == 'การบริหารงานบุคคล ( 130 คะแนน )'){
+    cell1.innerHTML = '<b>'+FBP[index].name+'</b>';
   }
-  else if(FBPList == 'ความร่วมมือและการเอาใจใส่บริหารที่ร้านสาขา (100 คะแนน)'){
-    cell1.innerHTML = '<b>'+FBPList+'</b>';
+  else if(FBP[index].name == 'ความร่วมมือและการเอาใจใส่บริหารที่ร้านสาขา (100 คะแนน)'){
+    cell1.innerHTML = '<b>'+FBP[index].name+'</b>';
   }
   else{
-    cell1.innerHTML = FBPList;
+    cell1.innerHTML = FBP[index].name;
     cell2.innerHTML =
-      '<input  class="form-check-input" type="radio" value="" style="font-size: 1.8rem; margin-right: 10%; border-color: black;" name="' + FBPList +'" id="' +FBPList +'"><input  class="form-check-input" type="radio" style="font-size: 1.8rem; margin-right: 10%; border-color: black;" value=""  name="' + FBPList +'" id="' +FBPList +'"><input  class="form-check-input" type="radio" style="font-size: 1.8rem; border-color: black;"  value=""  name="' + FBPList +'" id="' +FBPList +'">';
+      '<div class="scoretag"><label id="' + FBP[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + FBP[index].range + '" id="' + FBP[index].name + '" onchange="showvalue('+'\''+FBP[index].id+'\''+', id)">';
   }
 });
 
 // ------------------------------------ END Show Form TD --------------------------------
+function showvalue(id , name){
+  const range = document.getElementById(name);
+  const rangeValue = document.getElementById(id);
+  var total = range.value
+  rangeValue.innerHTML = total + " "+ "คะแนน";
+
+}

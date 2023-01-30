@@ -165,14 +165,12 @@ runaudit();
 
 function runfbp(){
   FBP.map((FBPList, index) => {
-    if(index == 0){
       var table = document.getElementById("FBPConfig");
     var row = table.insertRow(-1);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);
     cell1.innerHTML = FBP[index].name;
     cell2.innerHTML =
       ' <input class="form-check-input" type="checkbox" value="" name="' +
@@ -181,56 +179,18 @@ function runfbp(){
       FBP[index].name +
       '">';
     cell3.innerHTML = FBP[index].score; 
-    cell4.innerHTML =
-      '<input type="number" class="form-control" step="0.1" name="' +
-      FBP[index].name +
-      '" id="' +
-      FBP[index].name +
-      '">';
-    cell5.innerHTML =
-      '<input type="number" class="form-control" step="0.1" name="' +
-      FBP[index].name +
-      '" id="' +
-      FBP[index].name +
-      '">';
-    }
-    else{
-      var table = document.getElementById("FBPConfig");
-      var row = table.insertRow(-1);
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
-      cell1.innerHTML = FBP[index].name;
-      cell2.innerHTML =
-        ' <input class="form-check-input" type="checkbox" value="" name="' +
-        FBP[index].name +
-        '" id="' +
-        FBP[index].name +
-        '">';
-      cell3.innerHTML = FBP[index].score; 
-      cell4.innerHTML =
-        '<input type="number" class="form-control" step="0.1" name="' +
-        FBP[index].name +
-        '" id="' +
-        FBP[index].name +
-        '">';
-      cell5.innerHTML = ''
-    }
+    cell4.innerHTML = '<button type="button" class="btn btn-warning" onclick="scoreedit('+'\''+FBP[index].name+'\''+')" data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button>';
   });
 }
 
 function runaccount(){
   Account.map((AccountList, index) => {
-    if(index == 0){
       var table = document.getElementById("AccountConfig");
       var row = table.insertRow(-1);
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);
       var cell3 = row.insertCell(2);
       var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
       cell1.innerHTML = Account[index].name;
       cell2.innerHTML =
         ' <input class="form-check-input" type="checkbox" value="" name="' +
@@ -239,43 +199,7 @@ function runaccount(){
         Account[index].name +
         '">';
       cell3.innerHTML = Account[index].score; 
-      cell4.innerHTML =
-        '<input type="number" class="form-control" step="0.1" name="' +
-        Account[index].name +
-        '" id="' +
-        Account[index].name +
-        '">';
-      cell5.innerHTML =
-        '<input type="number" class="form-control" step="0.1" name="' +
-        Account[index].name +
-        '" id="' +
-        Account[index].name +
-        '">';
-    }
-    else{
-      var table = document.getElementById("AccountConfig");
-      var row = table.insertRow(-1);
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
-      cell1.innerHTML = Account[index].name;
-      cell2.innerHTML =
-        ' <input class="form-check-input" type="checkbox" value="" name="' +
-        Account[index].name +
-        '" id="' +
-        Account[index].name +
-        '">';
-      cell3.innerHTML = Account[index].score; 
-      cell4.innerHTML =
-        '<input type="number" class="form-control" step="0.1" name="' +
-        Account[index].name +
-        '" id="' +
-        Account[index].name +
-        '">';
-      cell5.innerHTML = ''
-    }
+      cell4.innerHTML = '<button type="button" class="btn btn-warning" onclick="scoreedit('+'\''+Account[index].name+'\''+')" data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button>'
   });
 }
 
@@ -287,7 +211,6 @@ function runaudit(){
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);
     cell1.innerHTML = Audit[index].name;
     cell2.innerHTML =
       ' <input class="form-check-input" type="checkbox" value="" name="' +
@@ -296,23 +219,63 @@ function runaudit(){
       Audit[index].name +
       '">';
     cell3.innerHTML = Audit[index].score; 
-    cell4.innerHTML =
-      '<input type="number" class="form-control" step="0.1" name="' +
-      Audit[index].name +
-      '" id="' +
-      Audit[index].name +
-      '">';
-    cell5.innerHTML =
-      '<input type="number" class="form-control" step="0.1" name="' +
-      Audit[index].name +
-      '" id="' +
-      Audit[index].name +
-      '">';
+    cell4.innerHTML = '<button type="button" class="btn btn-warning" onclick="scoreedit('+'\''+Audit[index].name+'\''+')" data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button>'
   });
 }
 
 
 // ------------------------------------ END Show Form TD --------------------------------
+
+// --------------------------------------- Edit Score --------------------------------------
+var newscore
+var startdate
+function scoreedit(name){
+  console.log(name)
+  document.getElementById('scoreheader').innerHTML = name;
+}
+function getnewscore(){
+  newscore = document.getElementById('score').value;
+  startdate = document.getElementById('startdate').value;
+  console.log(newscore , startdate)
+}
+function commitedit(){
+  var package = []
+  
+  package.push({newscore: newscore, startdate: startdate})
+  const data = package[0]
+
+  var myHeaders = new Headers();
+  var sendpackage = JSON.stringify(data);
+  console.log(sendpackage)
+
+  var requestpackge = {
+      method: 'POST',
+      headers: myHeaders,
+      body: sendpackage,
+      redirect: 'follow'
+  };
+  fetch("#", requestpackge)
+      .then(response => response.json())
+      .then(result => {
+          //console.log(result)
+          if (result.status === 'ok') {
+              Swal.fire(
+                  'บันทึกเสร็จสิ้น',
+                  'กลับสู่หน้าตรวจสอบงาน',
+                  'success'
+              ).then(() => {
+                  window.location = "./Formconfix.html";
+              })
+          }
+          else {
+              Swal.fire(
+                  'เกิดข้อผิดพลาด',
+                  'กรุณาลองใหม่อีกครั้ง',
+                  'error'
+              )
+          }
+      })
+}
 
 // ------------------------------------ Addlist --------------------------------
 var sectionselect
