@@ -2,6 +2,7 @@
 function sidenav() {
   document.getElementById("sidenav").style.width = "200px";
   document.getElementById("homepage").hidden = false;
+  document.getElementById("report").hidden = false;
   document.getElementById("setting").hidden = false;
   document.getElementById("logout").hidden = false;
   document.getElementById("content").style.marginLeft = "200px";
@@ -11,6 +12,7 @@ function sidenav() {
 function closeNav() {
   document.getElementById("sidenav").style.width = "60px";
   document.getElementById("homepage").hidden = true;
+  document.getElementById("report").hidden = true;
   document.getElementById("setting").hidden = true;
   document.getElementById("logout").hidden = true;
   document.getElementById("content").style.marginLeft = "5px";

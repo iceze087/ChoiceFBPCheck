@@ -3,6 +3,7 @@
 function sidenav() {
   document.getElementById("sidenav").style.width = "200px";
   document.getElementById("homepage").hidden = false;
+  document.getElementById("report").hidden = false;
   document.getElementById("FPB").hidden = false;
   document.getElementById("account").hidden = false;
   document.getElementById("audit").hidden = false;
@@ -15,6 +16,7 @@ function sidenav() {
 function closeNav() {
   document.getElementById("sidenav").style.width = "60px";
   document.getElementById("homepage").hidden = true;
+  document.getElementById("report").hidden = true;
   document.getElementById("FPB").hidden = true;
   document.getElementById("account").hidden = true;
   document.getElementById("audit").hidden = true;
@@ -217,12 +219,13 @@ FBP.map((FBPList, index) => {
   else{
     cell1.innerHTML = FBP[index].name;
     cell2.innerHTML =
-      '<div class="scoretag"><label id="' + FBP[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + FBP[index].range + '" id="' + FBP[index].name + '" onchange="showvalue('+'\''+FBP[index].id+'\''+', id)">';
+      '<div class="scoretag"><label id="' + FBP[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + FBP[index].range + '" id="' + FBP[index].name + '" onchange="showvalue('+'\''+FBP[index].id+'\''+', id , value)">';
   }
 });
 
 // ------------------------------------ END Show Form TD --------------------------------
-function showvalue(id , name){
+function showvalue(id , name , value){
+  console.log(value)
   const range = document.getElementById(name);
   const rangeValue = document.getElementById(id);
   var total = range.value

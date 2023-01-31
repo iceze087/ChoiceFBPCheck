@@ -2,6 +2,7 @@
 function sidenav() {
   document.getElementById("sidenav").style.width = "200px";
   document.getElementById("homepage").hidden = false;
+  document.getElementById("report").hidden = false;
   document.getElementById("setting").hidden = false;
   document.getElementById("logout").hidden = false;
   document.getElementById("content").style.marginLeft = "200px";
@@ -11,6 +12,7 @@ function sidenav() {
 function closeNav() {
   document.getElementById("sidenav").style.width = "60px";
   document.getElementById("homepage").hidden = true;
+  document.getElementById("report").hidden = true;
   document.getElementById("setting").hidden = true;
   document.getElementById("logout").hidden = true;
   document.getElementById("content").style.marginLeft = "5px";
@@ -94,9 +96,9 @@ var branch = [
 
 for(i=0 ; i<branch.length; i++){
   if(branch[i].status == 0){
-    document.getElementById('branch').innerHTML += '<div class="branchshow"><div class="row justify-content-center align-items-center"><div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail" >'+branch[i].id+' '+branch[i].name+'</div>'+'<div class="col-6 col-sm-4 d-flex align-items-center"><a href="./FBP_input.html"><button type="button" class="btn btn-secondary" id="btn" onclick="localStorage.setItem('+'\''+'bcheck'+'\''+' , '+branch[i].id+')">ประเมินผล</button></a>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem;">edit_square</span></div></div></div>'
+    document.getElementById('branch').innerHTML += '<div class="branchshow"><div class="row justify-content-center align-items-center"><div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail" >'+branch[i].id+' '+branch[i].name+'</div>'+'<div class="col-6 col-sm-4 d-flex align-items-center"><a href="./fc.html"><button type="button" class="btn btn-secondary" id="btn" onclick="localStorage.setItem('+'\''+'bcheck'+'\''+' , '+branch[i].id+')">ทำประเมิน</button></a>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem;">edit_square</span></div></div></div>'
   }
   else{
-    document.getElementById('branch').innerHTML += '<div class="branchshow"><div class="row justify-content-center align-items-center"><div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail" >'+branch[i].id+' '+branch[i].name+'</div>'+'<div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" id="btn" class="btn btn-success ">ประเมินผล</button>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem; color:green;">task_alt</span></div></div></div>'
+    document.getElementById('branch').innerHTML += '<div class="branchshow"><div class="row justify-content-center align-items-center"><div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail" >'+branch[i].id+' '+branch[i].name+'</div>'+'<div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" id="btn" class="btn btn-success ">ทำประเมิน</button>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem; color:green;">task_alt</span></div></div></div>'
   }
 }

@@ -1,7 +1,9 @@
+
 // ------------------------------sidenav function------------------------------
 function sidenav() {
   document.getElementById("sidenav").style.width = "200px";
   document.getElementById("homepage").hidden = false;
+  document.getElementById("report").hidden = false;
   document.getElementById("FPB").hidden = false;
   document.getElementById("account").hidden = false;
   document.getElementById("audit").hidden = false;
@@ -14,6 +16,7 @@ function sidenav() {
 function closeNav() {
   document.getElementById("sidenav").style.width = "60px";
   document.getElementById("homepage").hidden = true;
+  document.getElementById("report").hidden = true;
   document.getElementById("FPB").hidden = true;
   document.getElementById("account").hidden = true;
   document.getElementById("audit").hidden = true;

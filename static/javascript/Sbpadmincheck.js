@@ -2,6 +2,7 @@
 function sidenav() {
     document.getElementById("sidenav").style.width = "200px";
     document.getElementById("homepage").hidden = false;
+    document.getElementById("report").hidden = false;
     document.getElementById("setting").hidden = false;
     document.getElementById("logout").hidden = false;
     document.getElementById("content").style.marginLeft = "200px";
@@ -11,6 +12,7 @@ function sidenav() {
   function closeNav() {
     document.getElementById("sidenav").style.width = "60px";
     document.getElementById("homepage").hidden = true;
+    document.getElementById("report").hidden = true;
     document.getElementById("setting").hidden = true;
     document.getElementById("logout").hidden = true;
     document.getElementById("content").style.marginLeft = "5px";
@@ -441,7 +443,7 @@ function rundata(){
             cell5.innerHTML += '<span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span>'
         }
         if(branch[i].sbpstatus == 1&& branch[i].accountstatus == 1 && branch[i].auditstatus == 1){
-            cell6.innerHTML += '<a href="./reportview.html" target="_blank"><button type="button" class="btn btn-primary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a>'
+            cell6.innerHTML += '<a href="./evaluate1.html" target="_blank"><button type="button" class="btn btn-primary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a>'
         }
         else{
             cell6.innerHTML += '<button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button>'

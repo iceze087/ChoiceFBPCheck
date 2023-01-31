@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/FBP_input.css">
+    <link rel="stylesheet" href="../static/css/fc.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -22,7 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>FC ประเมิน</title>
 </head>
@@ -44,8 +45,8 @@
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <a class="navbar-brand" href="./index.html"><img src="../static/image/choice-lg.png" style="height: 50px;"
-                            alt=""></a>
+                    <a class="navbar-brand" href="./index.html"><img src="../static/image/choice-lg.png"
+                            style="height: 50px;" alt=""></a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -57,26 +58,32 @@
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./FBP_input.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">fact_check</span>&nbsp;<label for="">SBP
+                            <a class="d-flex align-items-center" href="./evaluate_status.html"
+                                style="display: flex;"><span
+                                    class="material-symbols-outlined">summarize</span>&nbsp;<label
+                                    for="">ผลการประเมิน</label></a>
+                        </li>
+                        <hr>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center" href="./fc.html" style="display: flex;"><span
+                                    class="material-symbols-outlined">fact_check</span>&nbsp;<label for="">FC
                                     ประเมิน</label></a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./Account_input.html"
-                                style="display: flex;"><span
+                            <a class="d-flex align-items-center" href="./account.html" style="display: flex;"><span
                                     class="material-symbols-outlined">account_balance</span>&nbsp;<label for="">บัญชี
                                     ประเมิน</label></a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./Audit_input.html" style="display: flex;"><span
+                            <a class="d-flex align-items-center" href="./audit.html" style="display: flex;"><span
                                     class="material-symbols-outlined">checklist_rtl</span>&nbsp;<label for="">Audit
                                     ประเมิน</label></a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./Formconfix.html" style="display: flex;"><span
+                            <a class="d-flex align-items-center" href="./formconfix.html" style="display: flex;"><span
                                     class="material-symbols-outlined">settings</span>&nbsp;<label
                                     for="">ตั้งค่า</label></a>
                         </li>
@@ -101,19 +108,23 @@
                 class="material-symbols-outlined">home</span>&nbsp;<label for="" id="homepage"
                 hidden>หน้าหลัก</label></a>
         <hr>
-        <a class="d-flex align-items-center" href="./FBP_input.html" style="display: flex;"><span
-                class="material-symbols-outlined">fact_check</span>&nbsp;<label hidden for="" id="FPB">SBP
+        <a class="d-flex align-items-center" href="./evaluate_status.html" style="display: flex;"><span
+                class="material-symbols-outlined">summarize</span>&nbsp;<label for="" id="report"
+                hidden>ผลการประเมิน</label></a>
+        <hr>
+        <a class="d-flex align-items-center" href="./fc.html" style="display: flex;"><span
+                class="material-symbols-outlined">fact_check</span>&nbsp;<label hidden for="" id="FPB">FC
                 ประเมิน</label></a>
         <hr>
-        <a class="d-flex align-items-center" href="./Account_input.html" style="display: flex;"><span
+        <a class="d-flex align-items-center" href="./account.html" style="display: flex;"><span
                 class="material-symbols-outlined">account_balance</span>&nbsp;<label for="" id="account" hidden>บัญชี
                 ประเมิน</label></a>
         <hr>
-        <a class="d-flex align-items-center" href="./Audit_input.html" style="display: flex;"><span
+        <a class="d-flex align-items-center" href="./audit.html" style="display: flex;"><span
                 class="material-symbols-outlined">event_available</span>&nbsp;<label for="" id="audit" hidden>Audit
                 ประเมิน</label></a>
         <hr>
-        <a class="d-flex align-items-center" href="./Formconfix.html" style="display: flex;"><span
+        <a class="d-flex align-items-center" href="./formconfix.html" style="display: flex;"><span
                 class="material-symbols-outlined">settings</span>&nbsp;<label for="" id="setting"
                 hidden>ตั้งค่า</label></a>
         <hr>
@@ -123,12 +134,12 @@
         <hr>
     </div>
     <!-- ----------------------------------------------END NAV------------------------------------------------------ -->
-   
+
     <!-- ----------------------------------------------content---------------------------------------------- -->
-    
-      
+
+
     <div id="content">
-         
+
         <h3 class="header">การบริหารงานที่ร้านสาขา</h3>
         <h4 id="showbdetail"></h4>
         <form>
@@ -149,7 +160,7 @@
         </form>
     </div>
     <!-- ----------------------------------------------END content---------------------------------------------- -->
-    <script src="../static/javascript/FBP_input.js"></script>
+    <script src="../static/javascript/fc.js"></script>
 </body>
 
 </html>
