@@ -51,7 +51,29 @@ function checkscreen() {
   }
 }
 // ------------------------------------ END ScreenCheck --------------------------------
+(() => {
+  'use strict'
 
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+              Swal.fire(
+                  'กรอกข้อมูลไม่ครบถ้วน',
+                  'รายละเอียดงาน , ภาพงานก่อสร้ง , วันที่ตรวจงานซ้ำ',
+                  'error'
+                )
+          }
+
+          form.classList.add('was-validated')
+      }, false)
+  })
+})()
 // ------------------------------------ DataSet --------------------------------
 var FBP = [
   // 'ผลการดำเนินงานประจำเดือน(3 เดือน) (290  คะแนน)',
@@ -202,26 +224,26 @@ for(var b = 0 ; b < branch.length; b++){
   }
 }
 
-FBP.map((FBPList, index) => {
-  var table = document.getElementById("FBPForm");
-  var row = table.insertRow(-1);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  if(FBP[index].name == 'ผลการดำเนินงานประจำเดือน(3 เดือน) (290  คะแนน)'){
-    cell1.innerHTML = '<b>'+FBP[index].name+'</b>';
-  }
-  else if(FBP[index].name == 'การบริหารงานบุคคล ( 130 คะแนน )'){
-    cell1.innerHTML = '<b>'+FBP[index].name+'</b>';
-  }
-  else if(FBP[index].name == 'ความร่วมมือและการเอาใจใส่บริหารที่ร้านสาขา (100 คะแนน)'){
-    cell1.innerHTML = '<b>'+FBP[index].name+'</b>';
-  }
-  else{
-    cell1.innerHTML = FBP[index].name;
-    cell2.innerHTML =
-      '<div class="scoretag"><label id="' + FBP[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + FBP[index].range + '" id="' + FBP[index].name + '" onchange="showvalue('+'\''+FBP[index].id+'\''+', id , value)">';
-  }
-});
+// FBP.map((FBPList, index) => {
+//   var table = document.getElementById("FBPForm");
+//   var row = table.insertRow(-1);
+//   var cell1 = row.insertCell(0);
+//   var cell2 = row.insertCell(1);
+//   if(FBP[index].name == 'ผลการดำเนินงานประจำเดือน(3 เดือน) (290  คะแนน)'){
+//     cell1.innerHTML = '<b>'+FBP[index].name+'</b>';
+//   }
+//   else if(FBP[index].name == 'การบริหารงานบุคคล ( 130 คะแนน )'){
+//     cell1.innerHTML = '<b>'+FBP[index].name+'</b>';
+//   }
+//   else if(FBP[index].name == 'ความร่วมมือและการเอาใจใส่บริหารที่ร้านสาขา (100 คะแนน)'){
+//     cell1.innerHTML = '<b>'+FBP[index].name+'</b>';
+//   }
+//   else{
+//     cell1.innerHTML = FBP[index].name;
+//     cell2.innerHTML =
+//       '<div class="scoretag"><label id="' + FBP[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + FBP[index].range + '" id="' + FBP[index].name + '" onchange="showvalue('+'\''+FBP[index].id+'\''+', id , value)">';
+//   }
+// });
 
 // ------------------------------------ END Show Form TD --------------------------------
 function showvalue(id , name , value){
@@ -230,5 +252,4 @@ function showvalue(id , name , value){
   const rangeValue = document.getElementById(id);
   var total = range.value
   rangeValue.innerHTML = total + " "+ "คะแนน";
-
 }

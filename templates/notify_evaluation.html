@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="content">
+    <h2 class="headernoti">แจ้งทำประเมิน </h2>
+    <div class="container text-center" id="openption">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                แบบไตรมาส
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form action="">
+
+                                    <div class="d-flex justify-content-center">
+                                        <input class="form-check-input" type="radio" value="1" name="quarter"
+                                            id="quarter" style="font-size: 1.5rem; border-color: black;">&emsp;
+                                        <label class="form-check-label" for="flexRadioDefault1"
+                                            style="font-size: 1.5rem;">
+                                            ไตรมาสที่ 1
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <input class="form-check-input" type="radio" value="2" name="quarter"
+                                            id="quarter" style="font-size: 1.5rem; border-color: black;">&emsp;
+                                        <label class="form-check-label" for="flexRadioDefault1"
+                                            style="font-size: 1.5rem;">
+                                            ไตรมาสที่ 2
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <input class="form-check-input" type="radio" value="3" name="quarter"
+                                            id="quarter" style="font-size: 1.5rem; border-color: black;">&emsp;
+                                        <label class="form-check-label" for="flexRadioDefault1"
+                                            style="font-size: 1.5rem;">
+                                            ไตรมาสที่ 3
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <input class="form-check-input" type="radio" value="4" name="quarter"
+                                            id="quarter" style="font-size: 1.5rem; border-color: black;">&emsp;
+                                        <label class="form-check-label" for="flexRadioDefault1"
+                                            style="font-size: 1.5rem;">
+                                            ไตรมาสที่ 4
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <button type="submit" id="opensubmit" class="btn btn-primary" onclick="opencheck()">บันทึก</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                แบบรายเดือน
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form action="">
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m1" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 1
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m2" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 2
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m3" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 3
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m4" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 4
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m5" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 5
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m6" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 6
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m7" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 7
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m8" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 8
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m9" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 9
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m10" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 10
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m11" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 11
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex justify-content-start">
+                                                <input class="form-check-input" type="radio" value="m12" name="month"
+                                                    id="month" style="font-size: 1.2rem; border-color: black;">&emsp;
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    style="font-size: 1.2rem;">
+                                                    เดือน 12
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <br>
+                                    <button type="submit" id="opensubmit" class="btn btn-primary" onclick="opencheck()">บันทึก</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="oncheck" hidden>
+        <label for="" id="openheader">การประเมินที่กำลังดำเนินการอยู่</label>
+        <div class="row" id="ongoing">
+            <div class="col-12 col-sm-12 col-md-9 col-lg-9">
+                การประเมินแบบรายเดือน ประจำเดือนที่ 1/2023
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                <button type="button" id="opensubmit"  class="btn btn-success" onclick="endcheck()">จบการประเมิน</button>
+            </div>
+          </div>
+
+        
+    </div>
+</div>
+
+<script src="/static/javascript/notify_evaluation.js"></script>
+{% endblock %}

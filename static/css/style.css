@@ -1,0 +1,306 @@
+/* -----------sidenav style---------- */
+#bodystyle {
+    background-color: #E3E3E3;
+    font-family: 'Sarabun', sans-serif;
+  }
+  
+  .navbar {
+    background-color: #3C6255;
+    height: 10%;
+    font-family: 'Sarabun', sans-serif;
+  }
+  
+  #projectname {
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    font-family: 'Sarabun', sans-serif;
+  }
+  
+  #sidenav {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #3C6255;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 90px;
+    font-family: 'Sarabun', sans-serif;
+  }
+  
+  #sidenav a {
+    padding: 0px 8px 0px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    display: block;
+    transition: 0.5s;
+  }
+  #sidenav label:hover {
+    color: red;
+  }
+  #sidenav span:hover {
+    color: red;
+  }
+  
+  #sidenav span {
+    color: white;
+  }
+  
+  #sidenav label {
+    font-size: 1.2rem;
+    color: white;
+  }
+  #userbtn{
+    border-radius: 25px;
+  }
+  
+  #btnclose {
+    font-size: 1.8rem;
+    border-style: solid;
+    border-radius: 10px;
+  }
+  
+  #offcanvasNavbar {
+    width: 65%;
+    background-color: #3C6255;
+    font-family: 'Sarabun', sans-serif;
+  }
+  
+  #offcanvasNavbar a {
+    padding: 0px 3px 0px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  #offcanvasNavbar span {
+    font-size: 2rem;
+    color: black;
+  }
+  
+  #offcanvasNavbar label {
+    font-size: 1.3rem;
+    color: black;
+  }
+  
+  .offcanvas-body{
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+  /* ----------- End sidenav style---------- */
+  
+  /* -----------body style---------- */
+  body {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    transition: margin-left 0.5s;
+    padding-left: 80px;
+    padding-right: 40px;
+    font-family: 'Sarabun', sans-serif;
+  }
+  
+  #content {
+    transition: margin-left 0.5s;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 25px;
+    background-color: white;
+    height: 100%;
+    padding: 2%;
+    overflow: auto;
+    font-family: 'Sarabun', sans-serif;
+  }
+  .header{
+    padding-top: 2%;
+    text-align: center;
+  }
+  #branchheader{
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  #bname{
+    padding-left: 5%;
+  }
+  .branchdetail{
+    padding-left: 3%;
+    font-size: 1.1rem;
+  }
+  #btnaccess{
+    font-size: 1.1rem;
+  }
+  .branchshow{
+    margin-bottom: 2%;
+  }
+  #btn{
+    font-size: 1.1rem;
+  }
+  #bdetail{
+    font-size: 1.2rem;
+  }
+  
+  /* ----------- End body style---------- */
+
+/* ------------------------ fc ----------------------- */
+#fbpsubmit{
+    width: 100%;
+}
+#showbdetail{
+  color: red;
+}
+/* ---------- Range -------- */
+.range-value {
+  text-align: center;
+  background-color: #3C6255;
+  color: white;
+  width: 90px;
+  margin-left: 20%;
+  border-radius: 20px;
+}
+.scoretag{
+  text-align: center;
+}
+
+/* -------------- form config ------------ */
+
+.setting{
+    margin-top: 2%;
+  }
+  .header {
+    text-align: center;
+  }
+  #settingcollapse{
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  #configsubmit{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+  } 
+  .form-check-input{
+    font-size: 2rem;
+  }
+  #addlistbtn{
+    margin-left: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  #FBPcollapse input{
+    border-color: black;
+  }
+  #Accountcollapse input{
+    border-color: black;
+  }
+  #AuditConfig input{
+    border-color: black;
+  }
+  #editscore{
+    font-size: 1.2rem;
+  }
+  #editscore p{
+    font-size: 1.5rem;
+  }
+  /* ----------- End body style---------- */
+  
+  /* ----------- report vice ---------- */
+  table{
+    padding-left: 3%;
+    padding-right: 3%;
+    border-color: black;
+    font-family: 'Sarabun', sans-serif;
+}
+.headernoti{
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+/* ------------ noti ----------- */
+#oncheck{
+  padding: 15px;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: #3C6255;
+}
+#opensubmit{
+  width: 100%;
+  font-size: 1.3rem;
+  margin-top: 2%;
+}
+#openheader{
+  margin-bottom: 2%;
+  font-size: 1.2rem;
+  color: #3C6255;
+}
+#ongoing{
+  font-size: 1.5rem;
+}
+/* -------- grade ------- */
+#totalgrade{
+  overflow-x: scroll;
+}
+#totalgrade th {
+  text-align: center;
+  max-width: 220px;
+  min-width: 100px;
+}
+#totalgrade td {
+  width: 100%;
+  text-align: center;
+}
+/* ---------- employee --------- */
+.employeeheader{
+  text-align: center;
+}
+#bcode{
+  width: 100%;
+}
+#nameinput{
+  margin-bottom: 3%;
+}
+#lnameinput{
+  margin-bottom: 3%;
+}
+#engname{
+  margin-bottom: 3%;
+}
+#personalid{
+  margin-bottom: 3%;
+}
+#brithday{
+  margin-bottom: 3%;
+}
+#pnumber{
+  margin-bottom: 3%;
+}
+#position{
+  margin-bottom: 2%;
+}
+#empid{
+  margin-bottom: 2%;
+}
+#workstart{
+  margin-bottom: 2%;
+}
+#exportemp{
+  width: 100%;
+}
+#addbcode{
+  width: 100%;
+}
+#export{
+  background-color: white;
+  border-radius: 25px;
+  padding: 15px;
+}
+#name_last{
+  display: flex;
+}

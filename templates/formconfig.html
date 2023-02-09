@@ -1,0 +1,376 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- ----------------------------------------------content---------------------------------------------- -->
+<div id="content">
+    <h4 style="text-align: center;">ตั้งค่าหัวข้อการประเมิน SBP</h4>
+    <div class="addbtn">
+        <button type="button" class="btn btn-dark d-flex justify-content-center" id="addlistbtn" data-bs-toggle="modal"
+            data-bs-target="#addlist">
+            <span class="material-symbols-outlined">add_box</span>เพิ่มหัวข้อการประเมิน
+        </button>
+    </div>
+    <form>
+        <div class="setting">
+            <button class="btn btn-warning d-flex justify-content-center" type="button" data-bs-toggle="collapse"
+                data-bs-target="#FBPcollapse" id="settingcollapse" aria-expanded="false"
+                aria-controls="collapseExample">
+                การบริหารงานที่ร้านสาขา<span class="material-icons">keyboard_double_arrow_down</span>
+            </button>
+            <div class="collapse" id="FBPcollapse">
+                <div class="card card-body">
+                    <table class="table" id="FBPConfig">
+                        <thead>
+                            <tr>
+                                <th scope="col">หัวข้อ</th>
+                                <th scope="col">การใช้งาน</th>
+                                <th scope="col">คะแนน</th>
+                                <th scope="col">แก้ไขคะแนน</th>
+                            </tr>
+                            <tr>
+                                <td>2.1 อัตรากำลังคนรวมครบตามโครงสร้าง</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.1 อัตรากำลังคนรวมครบตามโครงสร้าง"
+                                        id="2.1 อัตรากำลังคนรวมครบตามโครงสร้าง"></td>
+                                <td>40</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.1 อัตรากำลังคนรวมครบตามโครงสร้าง')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.2
+                                    จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน
+                                </td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.2 จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน"
+                                        id="2.2 จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน">
+                                </td>
+                                <td>20</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.2 จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน"
+                                        id="2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน"></td>
+                                <td>20</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.4 การบริหารจัดการและการดูแลทีมงานในร้าน</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.4 การบริหารจัดการและการดูแลทีมงานในร้าน"
+                                        id="2.4 การบริหารจัดการและการดูแลทีมงานในร้าน"></td>
+                                <td>20</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.4 การบริหารจัดการและการดูแลทีมงานในร้าน')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม"
+                                        id="2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม"></td>
+                                <td>10</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน"
+                                        id="2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน"></td>
+                                <td>15</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.7 ส่งสำเนาทะเบียนลูกจ้าง</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.7 ส่งสำเนาทะเบียนลูกจ้าง" id="2.7 ส่งสำเนาทะเบียนลูกจ้าง"></td>
+                                <td>10</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.7 ส่งสำเนาทะเบียนลูกจ้าง')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ"
+                                        id="3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ"></td>
+                                <td>15</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ"
+                                        id="3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ"></td>
+                                <td>15</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.3 การสั่งสินค้าผ่านระบบ Online</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="3.3 การสั่งสินค้าผ่านระบบ Online" id="3.3 การสั่งสินค้าผ่านระบบ Online">
+                                </td>
+                                <td>10</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('3.3 การสั่งสินค้าผ่านระบบ Online')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท"
+                                        id="3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท"></td>
+                                <td>10</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.5 ความร่วมมือในการประชุมกับทีม OPT</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="3.5 ความร่วมมือในการประชุมกับทีม OPT"
+                                        id="3.5 ความร่วมมือในการประชุมกับทีม OPT"></td>
+                                <td>20</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('3.5 ความร่วมมือในการประชุมกับทีม OPT')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ"
+                                        id="3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ"></td>
+                                <td>30</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="btn btn-warning btn btn-warning d-flex justify-content-center" type="button"
+                data-bs-toggle="collapse" data-bs-target="#Accountcollapse" id="settingcollapse" aria-expanded="false"
+                aria-controls="collapseExample">
+                การบริหารการเงินและบัญชี<span class="material-icons">keyboard_double_arrow_down</span>
+            </button>
+            <div class="collapse" id="Accountcollapse">
+                <div class="card card-body">
+                    <table class="table" id="AccountConfig">
+                        <thead>
+                            <tr>
+                                <th scope="col">หัวข้อ</th>
+                                <th scope="col">การใช้งาน</th>
+                                <th scope="col">คะแนน</th>
+                                <th scope="col">แก้ไขคะแนน</th>
+                            </tr>
+                            <tr>
+                                <td>1.1 การ Online Receiving log</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="1.1 การ Online  Receiving log" id="1.1 การ Online  Receiving log"></td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('1.1 การ Online  Receiving log')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>1.2 การ Online Cash Report</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="1.2 การ Online Cash Report" id="1.2 การ Online Cash Report"></td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('1.2 การ Online Cash Report')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>1.3 การจัดส่งเอกสาร Receiving Log</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="1.3 การจัดส่งเอกสาร Receiving Log" id="1.3 การจัดส่งเอกสาร Receiving Log">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('1.3 การจัดส่งเอกสาร Receiving Log')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>1.4 การคีย์ข้อมูล Receiving Log</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="1.4 การคีย์ข้อมูล Receiving Log" id="1.4 การคีย์ข้อมูล Receiving Log">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('1.4 การคีย์ข้อมูล Receiving Log')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>1.5 การคีย์ข้อมูล Mark up / Down</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="1.5 การคีย์ข้อมูล Mark up / Down" id="1.5 การคีย์ข้อมูล Mark up / Down">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('1.5 การคีย์ข้อมูล Mark up / Down')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.1 ความร่วมมือในการตรวจนับเงินสด</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.1 ความร่วมมือในการตรวจนับเงินสด" id="2.1 ความร่วมมือในการตรวจนับเงินสด">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.1 ความร่วมมือในการตรวจนับเงินสด')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด"
+                                        id="2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด"></td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.3 ความร่วมมือในการตรวจนับสินค้า</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="2.3 ความร่วมมือในการตรวจนับสินค้า" id="2.3 ความร่วมมือในการตรวจนับสินค้า">
+                                </td>
+                                <td>15</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('2.3 ความร่วมมือในการตรวจนับสินค้า')" data-bs-toggle="modal"
+                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น."
+                                        id="3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น."></td>
+                                <td>10</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="btn btn-warning btn btn-warning d-flex justify-content-center" type="button"
+                data-bs-toggle="collapse" data-bs-target="#Auditcollapse" id="settingcollapse" aria-expanded="false"
+                aria-controls="collapseExample">
+                การมีส่วนร่วมกับนโยบายบริษัท<span class="material-icons">keyboard_double_arrow_down</span>
+            </button>
+            <div class="collapse" id="Auditcollapse">
+                <div class="card card-body">
+                    <table class="table" id="AuditConfig">
+                        <thead>
+                            <tr>
+                                <th scope="col">หัวข้อ</th>
+                                <th scope="col">การใช้งาน</th>
+                                <th scope="col">คะแนน</th>
+                                <th scope="col">แก้ไขคะแนน</th>
+                            </tr>
+                            <tr>
+                                <td>ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท</td>
+                                <td> <input class="form-check-input" type="checkbox" value=""
+                                        name="ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท"
+                                        id="ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท"></td>
+                                <td>10</td>
+                                <td><button type="button" class="btn btn-warning"
+                                        onclick="scoreedit('ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท')"
+                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button type="submit" id="configsubmit" class="btn btn-primary">บันทึก</button>
+    </form>
+</div>
+<!-- ----------------------------------------------END content---------------------------------------------- -->
+<!-- ---------------------------------------------- Modal ---------------------------------------------- -->
+<div class="modal fade" id="addlist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    เพิ่มหัวข้อการประเมิน</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <label for="" class="form-label">หัวข้อที่ต้องการเพิ่ม</label>
+                    <select class="form-select" aria-label="Default select example" id="sectionselect"
+                        onchange="addlist()">
+                        <option selected>เลือกหัวข้อที่จะเพิ่ม</option>
+                        <option value="SBP">การบริหารงานที่ร้านสาขา</option>
+                        <option value="Account">การบริหารการเงินและบัญชี</option>
+                        <option value="Audit">การมีส่วนร่วมกับนโยบายบริษัท</option>
+                    </select><br>
+                    <label for="" class="form-label">รายละเอียดหัวข้อ</label>
+                    <input type="text" class="form-control" id="adddetail" onkeyup="addlist()">
+                    <label for="" class="form-label">คะแนนหัวข้อ</label>
+                    <input type="number" class="form-control" id="scoredetail" onkeyup="addlist()">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="button" class="btn btn-primary" onclick="commitadd()">เพิ่ม</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editscore" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    <p id="scoreheader"></p>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <label for="" class="form-label">คะแนนใหม่</label>
+                    <input type="number" class="form-control" id="score" step=".01" onkeyup="getnewscore()">
+                    <label for="" class="form-label">วันที่เริ่มใช้</label>
+                    <input type="date" class="form-control" id="startdate" onchange="getnewscore()">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="button" class="btn btn-primary" onclick="commitedit()">บันทึก</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------- END Modal ---------------------------------------------- -->
+<script src="../static/javascript/Formconfix.js"></script>
+{% endblock %}

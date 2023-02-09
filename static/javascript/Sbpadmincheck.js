@@ -3,6 +3,9 @@ function sidenav() {
     document.getElementById("sidenav").style.width = "200px";
     document.getElementById("homepage").hidden = false;
     document.getElementById("report").hidden = false;
+    document.getElementById("noti").hidden = false;
+    document.getElementById("score").hidden = false;
+    document.getElementById('empname').hidden = false;
     document.getElementById("setting").hidden = false;
     document.getElementById("logout").hidden = false;
     document.getElementById("content").style.marginLeft = "200px";
@@ -13,13 +16,15 @@ function sidenav() {
     document.getElementById("sidenav").style.width = "60px";
     document.getElementById("homepage").hidden = true;
     document.getElementById("report").hidden = true;
+    document.getElementById("noti").hidden = true;
+    document.getElementById("score").hidden = true;
+    document.getElementById('empname').hidden = true;
     document.getElementById("setting").hidden = true;
     document.getElementById("logout").hidden = true;
     document.getElementById("content").style.marginLeft = "5px";
     document.getElementById("navclose").hidden = true;
     document.getElementById("opennavs").hidden = false;
   }
-// ------------------------------END sidenav function---------------------------
 //   ----------------------------------- Data Set -----------------------------------------
 var branch = [
     {
@@ -410,50 +415,50 @@ function checkscreen() {
 // ------------------------------------ END ScreenCheck --------------------------------
 
 // ------------------------------------- Show Table --------------------------------------
-rundata()
-function rundata(){
-    // var table = document.getElementById("");
-    var myTbody = document.querySelector("#totalcheck>tbody");
-    for(var i = 0; i < branch.length; i++){
-        var row = myTbody.insertRow(-1);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
-        var cell5 = row.insertCell(4);
-        var cell6 = row.insertCell(5);
-        cell1.innerHTML += branch[i].bcode;
-        cell2.innerHTML += branch[i].bname;
-        if(branch[i].sbpstatus == 1){
-            cell3.innerHTML += '<span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span>'
-        }
-        else{
-            cell3.innerHTML += '<span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span>'
-        }
-        if(branch[i].accountstatus == 1){
-            cell4.innerHTML += '<span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span>'
-        }
-        else{
-            cell4.innerHTML += '<span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span>'
-        }
-        if(branch[i].auditstatus == 1){
-            cell5.innerHTML += '<span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span>'
-        }
-        else{
-            cell5.innerHTML += '<span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span>'
-        }
-        if(branch[i].sbpstatus == 1&& branch[i].accountstatus == 1 && branch[i].auditstatus == 1){
-            cell6.innerHTML += '<a href="./evaluate1.html" target="_blank"><button type="button" class="btn btn-primary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a>'
-        }
-        else{
-            cell6.innerHTML += '<button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button>'
-        }
-    }
-    $(document).ready(function () {
-        $('#totalcheck').DataTable();
-    });
-  }
+// rundata()
+// function rundata(){
+//     // var table = document.getElementById("");
+//     var myTbody = document.querySelector("#totalcheck>tbody");
+//     for(var i = 0; i < branch.length; i++){
+//         var row = myTbody.insertRow(-1);
+//         var cell1 = row.insertCell(0);
+//         var cell2 = row.insertCell(1);
+//         var cell3 = row.insertCell(2);
+//         var cell4 = row.insertCell(3);
+//         var cell5 = row.insertCell(4);
+//         var cell6 = row.insertCell(5);
+//         cell1.innerHTML += branch[i].bcode;
+//         cell2.innerHTML += branch[i].bname;
+//         if(branch[i].sbpstatus == 1){
+//             cell3.innerHTML += '<span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span>'
+//         }
+//         else{
+//             cell3.innerHTML += '<span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span>'
+//         }
+//         if(branch[i].accountstatus == 1){
+//             cell4.innerHTML += '<span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span>'
+//         }
+//         else{
+//             cell4.innerHTML += '<span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span>'
+//         }
+//         if(branch[i].auditstatus == 1){
+//             cell5.innerHTML += '<span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span>'
+//         }
+//         else{
+//             cell5.innerHTML += '<span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span>'
+//         }
+//         if(branch[i].sbpstatus == 1&& branch[i].accountstatus == 1 && branch[i].auditstatus == 1){
+//             cell6.innerHTML += '<a href="./evaluate1.html" target="_blank"><button type="button" class="btn btn-primary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a>'
+//         }
+//         else{
+//             cell6.innerHTML += '<button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span class="material-symbols-outlined">summarize</span>ดูรายงาน</button>'
+//         }
+//     }
 
+//   }
+  $(document).ready(function () {
+    $('#totalcheck').DataTable();
+});
 // ------------------------------------- END Show Table ----------------------------------
 
 // -------------------------------------- Opensubmit--------------------------------------

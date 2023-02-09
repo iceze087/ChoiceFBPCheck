@@ -52,7 +52,29 @@ function checkscreen() {
   }
 }
 // ------------------------------------ END ScreenCheck --------------------------------
+(() => {
+  'use strict'
 
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+              Swal.fire(
+                  'กรอกข้อมูลไม่ครบถ้วน',
+                  'รายละเอียดงาน , ภาพงานก่อสร้ง , วันที่ตรวจงานซ้ำ',
+                  'error'
+                )
+          }
+
+          form.classList.add('was-validated')
+      }, false)
+  })
+})()
 // ------------------------------------ DataSet --------------------------------
 var Account = [
   {
@@ -172,23 +194,24 @@ for(var b = 0 ; b < branch.length; b++){
     document.getElementById('showbdetail').innerHTML = 'ร้านสาขาที่ : ' + branch[b].id + ' ' + branch[b].name
   }
 }
-Account.map((AccountListList, index) => {
-  var table = document.getElementById("AccountForm");
-  var row = table.insertRow(-1);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  if (Account[index].name == "ความร่วมมือในการส่งข้อมูล (25 คะแนน)") {
-    cell1.innerHTML = "<b>" + Account[index].name + "</b>";
-  } else if (Account[index].name == "ความร่วมมือกับเจ้าหน้าที่ตรวจนับ(25 คะแนน)") {
-    cell1.innerHTML = "<b>" + Account[index].name + "</b>";
-  } else if (Account[index].name == "ความร่วมมือในการนำเงินฝาก(10 คะแนน)") {
-    cell1.innerHTML = "<b>" + Account[index].name + "</b>";
-  }else {
-    cell1.innerHTML = Account[index].name;
-    cell2.innerHTML =
-    '<div class="scoretag"><label id="' + Account[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + Account[index].range + '" id="' + Account[index].name + '" onchange="showvalue('+'\''+Account[index].id+'\''+', id)">';
-}
-});
+
+// Account.map((AccountListList, index) => {
+//   var table = document.getElementById("AccountForm");
+//   var row = table.insertRow(-1);
+//   var cell1 = row.insertCell(0);
+//   var cell2 = row.insertCell(1);
+//   if (Account[index].name == "ความร่วมมือในการส่งข้อมูล (25 คะแนน)") {
+//     cell1.innerHTML = "<b>" + Account[index].name + "</b>";
+//   } else if (Account[index].name == "ความร่วมมือกับเจ้าหน้าที่ตรวจนับ(25 คะแนน)") {
+//     cell1.innerHTML = "<b>" + Account[index].name + "</b>";
+//   } else if (Account[index].name == "ความร่วมมือในการนำเงินฝาก(10 คะแนน)") {
+//     cell1.innerHTML = "<b>" + Account[index].name + "</b>";
+//   }else {
+//     cell1.innerHTML = Account[index].name;
+//     cell2.innerHTML =
+//     '<div class="scoretag"><label id="' + Account[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + Account[index].range + '" id="' + Account[index].name + '" onchange="showvalue('+'\''+Account[index].id+'\''+', id)">';
+// }
+// });
 
 // ------------------------------------ END Show Form TD --------------------------------
 function showvalue(id , name){

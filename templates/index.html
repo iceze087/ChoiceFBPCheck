@@ -1,128 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-        crossorigin="anonymous"></script>
-    <!-- google icon && font -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>การประเมิน SBP</title>
-</head>
-
-<body id="bodystyle">
-    <nav class="navbar  fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html"><img src="../static/image/choice-lg.png" style="height: 50px;"
-                    alt=""></a>
-            <label id="projectname">ประเมินผล การบริหารร้าน 7-Eleven ของแฟรนไชส์</label>
-            <button type="button" class="btn" style="background-color: white;" id="userbtn"><label
-                    class="d-flex justify-content-center" for="" style="font-size: 1.2rem;"><span
-                        class="material-symbols-outlined" style="font-size: 2rem;">account_box</span>&nbsp; : &nbsp;
-                    Suttikaet</label></button>
-
-            <button class="navbar-toggler d-xs-block d-sm-block d-md-none" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="material-symbols-outlined" style="color: white; font-size: 2rem;">grid_view</span>
-            </button>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <a class="navbar-brand" href="./index.html"><img src="../static/image/choice-lg.png" style="height: 50px;"
-                            alt=""></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./index.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">home</span>&nbsp;<label
-                                    for="">หน้าหลัก</label></a>
-                        </li>
-                        <hr>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./evaluate_status.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">summarize</span>&nbsp;<label
-                                    for="">ผลการประเมิน</label></a>
-                        </li>
-                        <hr>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./formconfix.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">settings</span>&nbsp;<label
-                                    for="">ตั้งค่า</label></a>
-                        </li>
-                        <hr>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./login.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">logout</span>&nbsp;<label
-                                    for="">ออกจากระบบ</label></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="d-none d-sm-none d-md-block" id="sidenav">
-        <a href="javascript:void(0)" id="navclose" onclick="closeNav()" style="margin-left: 130px;" hidden><span
-                class="material-symbols-outlined" id="btnclose">first_page</span></a>
-
-        <a id="opennavs" onclick="sidenav()" style="font-size: 2rem;"><span class="material-symbols-outlined">open_in_new</span></a>
-
-        <hr>
-        <a class="d-flex align-items-center" href="./index.html" style="display: flex;"><span
-                class="material-symbols-outlined">home</span>&nbsp;<label for="" id="homepage"
-                hidden>หน้าหลัก</label></a>
-        <hr>
-        <a class="d-flex align-items-center" href="./evaluate_status.html" style="display: flex;"><span
-            class="material-symbols-outlined">summarize</span>&nbsp;<label for="" id="report"
-            hidden>ผลการประเมิน</label></a>
+{% extends "base.html" %}
+{% block content %}
+<div id="content">
+    <h3 class="header">เลือกสาขาที่ต้องการเข้าประเมิน</h3>
     <hr>
-        <a class="d-flex align-items-center" href="./formconfix.html" style="display: flex;"><span
-                class="material-symbols-outlined">settings</span>&nbsp;<label for="" id="setting"
-                hidden>ตั้งค่า</label></a>
+    <div class="container ">
+        <div class="row justify-content-center align-items-center" id="branchheader">
+            <div class="col-6 col-sm-8 d-flex align-items-center" id="bname" style="font-size: 1.2rem;"><span
+                    class="material-symbols-outlined">storefront</span>ชื่อสาขา</div>
+            <div class="col-6 col-sm-4 d-flex align-items-center" id="baction" style="font-size: 1.2rem;"><span
+                    class="material-symbols-outlined">list_alt</span>การเข้าประเมิน</div>
+        </div>
         <hr>
-        <a class="d-flex align-items-center" href="./login.html" style="display: flex;"><span
-                class="material-symbols-outlined">logout</span>&nbsp;<label for="" id="logout"
-                hidden>ออกจากระบบ</label></a>
-        <hr>
-    </div>
-    <!-- ----------------------------------------------END NAV------------------------------------------------------ -->
-    <!-- ----------------------------------------------content---------------------------------------------- -->
-    <div id="content">
-        <h3 class="header">เลือกสาขาที่ต้องการเข้าประเมิน</h3>
-        <hr>
-        <div class="container ">
-            <div class="row justify-content-center align-items-center" id="branchheader">
-                <div class="col-6 col-sm-8 d-flex align-items-center" id="bname"><span
-                        class="material-symbols-outlined">storefront</span>ชื่อสาขา</div>
-                <div class="col-6 col-sm-4 d-flex align-items-center" id="baction"><span
-                        class="material-symbols-outlined">list_alt</span>การเข้าประเมิน</div>
+        <div id="branch" class="branchdetail">
+            <div class="branchshow">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail">2119 สถานีรถไฟเชียงใหม</div>
+                    <div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" id="btn"
+                            class="btn btn-secondary">ทำประเมิน</button>&nbsp;<span class="material-symbols-outlined"
+                            style="font-size: 2rem;">task_alt</span></div>
+                </div>
             </div>
-            <hr>
-            <div id="branch" class="branchdetail"></div>
-            <!-- <div class="row justify-content-center align-items-center">
-                
-                <div class="col-6 col-sm-8 d-flex align-items-center" >11543 โครงการเดอะฟิวชั่น(บ้านท่อ)</div>
-                <div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" class="btn btn-secondary" id="btnaccess">ประเมินผล</button>&nbsp;<span class="material-symbols-outlined" style="font-size: 2rem;">edit_square</span></div>
-            </div> -->
+            <div class="branchshow">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail">2789 กาดอินทร</div>
+                    <div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" id="btn"
+                            class="btn btn-secondary">ทำประเมิน</button>&nbsp;<span class="material-symbols-outlined"
+                            style="font-size: 2rem;">task_alt</span></div>
+                </div>
+            </div>
+            <div class="branchshow">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail">3119 ศิริมังคลาจารย์</div>
+                    <div class="col-6 col-sm-4 d-flex align-items-center"><a href="./fc"><button type="button"
+                                class="btn btn-success" id="btn"
+                                onclick="localStorage.setItem('bcheck' , 3119)">ทำประเมิน</button></a>&nbsp;<span
+                            class="material-symbols-outlined" style="font-size: 2rem; color:green;">edit_square</span>
+                    </div>
+                </div>
+            </div>
+            <div class="branchshow">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail">3189 อบต.สุเทพ</div>
+                    <div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" id="btn"
+                            class="btn btn-secondary">ทำประเมิน</button>&nbsp;<span class="material-symbols-outlined"
+                            style="font-size: 2rem;">task_alt</span></div>
+                </div>
+            </div>
+            <div class="branchshow">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail">4059 ไชยปราการ</div>
+                    <div class="col-6 col-sm-4 d-flex align-items-center"><a href="./fc"><button type="button"
+                                class="btn btn-success" id="btn"
+                                onclick="localStorage.setItem('bcheck' , 4059)">ทำประเมิน</button></a>&nbsp;<span
+                            class="material-symbols-outlined" style="font-size: 2rem; color:green;">edit_square</span>
+                    </div>
+                </div>
+            </div>
+            <div class="branchshow">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail">4301 กาดอินทร 2</div>
+                    <div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" id="btn"
+                            class="btn btn-secondary">ทำประเมิน</button>&nbsp;<span class="material-symbols-outlined"
+                            style="font-size: 2rem;">task_alt</span></div>
+                </div>
+            </div>
+            <div class="branchshow">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail">5093 ศรีปิงเมือง 2</div>
+                    <div class="col-6 col-sm-4 d-flex align-items-center"><a href="./fc"><button type="button"
+                                class="btn btn-success" id="btn"
+                                onclick="localStorage.setItem('bcheck' , 5093)">ทำประเมิน</button></a>&nbsp;<span
+                            class="material-symbols-outlined" style="font-size: 2rem; color:green;">edit_square</span>
+                    </div>
+                </div>
+            </div>
+            <div class="branchshow">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail">5094 ศรีดอนไชย1</div>
+                    <div class="col-6 col-sm-4 d-flex align-items-center"><a href="./fc"><button type="button"
+                                class="btn btn-success" id="btn"
+                                onclick="localStorage.setItem('bcheck' , 5094)">ทำประเมิน</button></a>&nbsp;<span
+                            class="material-symbols-outlined" style="font-size: 2rem; color:green;">edit_square</span>
+                    </div>
+                </div>
+            </div>
+            <div class="branchshow">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-sm-8 d-flex align-items-center" id="bdetail">5147 ตลาดแม่กวง</div>
+                    <div class="col-6 col-sm-4 d-flex align-items-center"><button type="button" id="btn"
+                            class="btn btn-secondary">ทำประเมิน</button>&nbsp;<span class="material-symbols-outlined"
+                            style="font-size: 2rem;">task_alt</span></div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- ----------------------------------------------END content---------------------------------------------- -->
-    <script src="../static/javascript/index.js"></script>
-</body>
-
-</html>
+</div>
+<!-- ----------------------------------------------END content---------------------------------------------- -->
+<script src="../static/javascript/base.js"></script>
+{% endblock %}

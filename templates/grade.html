@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="content">
+    <h4 class="header">การทำแบบประเมิน ร้านสาขา SBP (คะแนนการประเมินรายเดือน เดือนที่ 1)</h4>
+   <br>
+    <table class="table table-striped table-hover" id="totalgrade">
+        <thead>
+            <tr>
+                <th scope="col">ฝ่าย</th>
+                <th scope="col">สาขา</th>
+                <th scope="col">ชื่อสาขา</th>
+                <th scope="col">บริหารงานร้านสาขา</th>
+                <th scope="col">บริหารงานบุคคล</th>
+                <th scope="col">ความร่วมมือและเอาใจใส่</th>
+                <th scope="col">บริหารการเงินและบัญชี</th>
+                <th scope="col">มีส่วนร่วมกับนโยบายบริษัทฯ</th>
+                <th scope="col">คะแนนรวม</th>
+                <th scope="col">คิดเป็น(%) ไตรมาสแรก</th>
+                <th scope="col">เกรด</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ประมวล</td>
+                <td>2119</td>
+                <td>สถานีรถไฟเชียงใหม่</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>50.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>50.00</td>
+                <td>5.00</td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>อดุลย์</td>
+                <td>3119</td>
+                <td>ศิริมังคลาจารย์</td>
+                <td>200.00</td>
+                <td>130.00</td>
+                <td>50.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>50.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>อดุลย์</td>
+                <td>3189</td>
+                <td>อบต.สุเทพ</td>
+                <td>130.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>50.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>50.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>ประมวล</td>
+                <td>4059</td>
+                <td>ไชยปราการ</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>200.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>50.00</td>
+                <td>50.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>นพดล</td>
+                <td>4301</td>
+                <td>กาดอินทร 2</td>
+                <td>120.00</td>
+                <td>200.00</td>
+                <td>50.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>50.00</td>
+                <td>50.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>กนกวรรณ</td>
+                <td>5093</td>
+                <td>ศรีปิงเมือง 2</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>50.00</td>
+                <td><button type="button" class="btn btn-warning">ยังไม่มีข้อมูล</button></td>
+                <td>50.00</td>
+                <td>5.00</td>
+                <td>F</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="/static/javascript/grade.js"></script>
+{% endblock %}

@@ -1,211 +1,574 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
+<!-- ----------------------------------------------content---------------------------------------------- -->
+<div id="content">
+    <h4 class="header">สถานะการทำแบบประเมิน ร้านสาขา SBP</h4>
+    <button type="button" class="btn btn-secondary d-flex justify-content-center" data-bs-toggle="modal"
+        data-bs-target="#configview" id="resultselect"><span
+            class="material-symbols-outlined">settings</span>เลือกผลการประเมิน</button>
+    <table class="table " id="totalcheck">
+        <thead>
+            <tr>
+                <th scope="col">รหัสสาขา</th>
+                <th scope="col">ชื่อสาขา</th>
+                <th scope="col">FC ประเมิน</th>
+                <th scope="col">บัญชี ประเมิน</th>
+                <th scope="col">Audit ประเมิน</th>
+                <th scope="col">ดูรายงาน</th>
+            </tr>
+        </thead>
+        <tbody>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/Sbpadmincheck.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-        crossorigin="anonymous"></script>
-    <!-- data table -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
-    <!-- google icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>สรุปการประเมิน SBP</title>
-</head>
+            <tr>
+                <td>2119</td>
+                <td>สถานีรถไฟเชียงใหม่</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>2789</td>
+                <td>กาดอินทร</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>3119</td>
+                <td>ศิริมังคลาจารย์</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>3189</td>
+                <td>อบต.สุเทพ</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>4059</td>
+                <td>ไชยปราการ</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>40301</td>
+                <td>กาดอินทร 2</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>5093</td>
+                <td>ศรีปิงเมือง 2</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>5094</td>
+                <td>ศรีดอนไชย 1</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>5147</td>
+                <td>ตลาดแม่กวง</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>5285</td>
+                <td>บุญเรืองฤทธิ์</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>5463</td>
+                <td>บ้านต้นเกว๋น</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>5724</td>
+                <td>บ้านสันกลาง (อ.สันกำแพง)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>5870</td>
+                <td>บ้านบวกครกเหนือ</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>6073</td>
+                <td>บ้านสันทรายทอง 2</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>6181</td>
+                <td>แม่เหี๊ยะ3</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>6200</td>
+                <td>เจ็ดยอดพลาซ่า</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>6236</td>
+                <td>บ้านสันต้นธง (จ.ลำพูน)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>7192</td>
+                <td>แม่แจ่ม</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>7379</td>
+                <td>หารแก้ว</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>7395</td>
+                <td>ช่างเคี่ยน 2</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>7930</td>
+                <td>หน้ากาดเชิงดอย</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>8071</td>
+                <td>บ้านหลิ่งมื่น</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>8160</td>
+                <td>ไชยปราการ 2</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>8468</td>
+                <td>ซอยชมจันทร์</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>8898</td>
+                <td>8898 บิสสิเนสพาร์ค</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>8961</td>
+                <td>8961 บ้านสันทรายหลวง</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>8962</td>
+                <td>ถนนโพธาราม(เชียงใหม่)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>9219</td>
+                <td>เชียงใหม่แลนด์ 1</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>9360</td>
+                <td>บ้านเอื้ออาทรสันผีเสื้อ</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>9548</td>
+                <td>หน้ารพ.สันทราย</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>9635</td>
+                <td>บ้านนิคมศรีสหกรณ์</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>9637</td>
+                <td>บ้านป่าข่อยใต้</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>10068</td>
+                <td>หนองฮ่อ</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>10693</td>
+                <td>ปาย 5</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>10737</td>
+                <td>เชียงใหม่บิสสิเนสพาร์ค 2</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>10995</td>
+                <td>ป่าแดด 4 (บ้านท่าใหม่อิ)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>11103</td>
+                <td>หน้าม.ช.2</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>11543</td>
+                <td>โครงการเดอะฟิวชั่น(บ้านท่อ)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>11656</td>
+                <td>บ้านเชิงดอย(ถ.สุเทพ)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>11949</td>
+                <td>บ้านขอนตาล(อ.แม่ริม)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>13239</td>
+                <td>ซอยวัดอุโมงค์ 3</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>13285</td>
+                <td>บ้านป่าแคโยง(อ.สารภี)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>14120</td>
+                <td>บ่อสร้าง2</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>14121</td>
+                <td>บ้านหนองบัว(อ.ฝาง)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>14154</td>
+                <td>บ้านปากทางสะลวง(อ.แม่ริม)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>14369</td>
+                <td>บ้านป่าตัน 2</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>14861</td>
+                <td>บ้านท่าข้าม(ต.แม่เหียะ)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>16162</td>
+                <td>บ้านช่างเคิ่งบน(อ.แม่แจ่ม)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>16325</td>
+                <td>บ้านป่าลาน(อ.สันทราย)</td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><span class="material-symbols-outlined" style=" color: red;font-size:2rem;">cancel</span></td>
+                <td><button type="button" class="btn btn-outline-secondary d-flex justify-content-center"><span
+                            class="material-symbols-outlined">summarize</span>ดูรายงาน</button></td>
+            </tr>
+            <tr>
+                <td>16685</td>
+                <td>บ้านดอนชัย (ต.ป่าแดด)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+            <tr>
+                <td>17819</td>
+                <td>บ้านดอนแก้ว(อ.สารภี)</td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><span class="material-symbols-outlined" style="color: green;font-size:2rem;">task_alt</span></td>
+                <td><a href="./evaluate1" target="_blank"><button type="button"
+                            class="btn btn-primary d-flex justify-content-center"><span
+                                class="material-symbols-outlined">summarize</span>ดูรายงาน</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<body id="bodystyle">
-    <nav class="navbar  fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html"><img src="../static/image/choice-lg.png" style="height: 50px;"
-                    alt=""></a>
-            <label id="projectname">ประเมินผล การบริหารร้าน 7-Eleven ของแฟรนไชส์</label>
-            <button type="button" class="btn" style="background-color: white;" id="userbtn"><label
-                    class="d-flex justify-content-center" for="" style="font-size: 1.2rem;"><span
-                        class="material-symbols-outlined" style="font-size: 2rem;">account_box</span>&nbsp; : &nbsp;
-                    Suttikaet</label></button>
-
-            <button class="navbar-toggler d-xs-block d-sm-block d-md-none" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="material-symbols-outlined" style="color: white; font-size: 2rem;">grid_view</span>
-            </button>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <a class="navbar-brand" href="./index.html"><img src="../static/image/choice-lg.png" style="height: 50px;"
-                            alt=""></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./index.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">home</span>&nbsp;<label
-                                    for="">หน้าหลัก</label></a>
-                        </li>
-                        <hr>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./evaluate_status.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">summarize</span>&nbsp;<label
-                                    for="">ผลการประเมิน</label></a>
-                        </li>
-                        <hr>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./formconfix.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">settings</span>&nbsp;<label
-                                    for="">ตั้งค่า</label></a>
-                        </li>
-                        <hr>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./login.html" style="display: flex;"><span
-                                    class="material-symbols-outlined">logout</span>&nbsp;<label
-                                    for="">ออกจากระบบ</label></a>
-                        </li>
-                    </ul>
-                </div>
+<!-- Modal -->
+<div class="modal fade" id="configview" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">เลือกช่วงเวลาสำหรับดูการประเมินผล</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </div>
-    </nav>
-    <div class="d-none d-sm-none d-md-block" id="sidenav">
-        <a href="javascript:void(0)" id="navclose" onclick="closeNav()" style="margin-left: 130px;" hidden><span
-                class="material-symbols-outlined" id="btnclose">first_page</span></a>
+            <div class="modal-body">
 
-        <a id="opennavs" onclick="sidenav()" style="font-size: 2rem;"><span class="material-symbols-outlined">open_in_new</span></a>
+                <form>
+                    <a class="btn btn-light d-flex justify-content-center" data-bs-toggle="collapse" id="quarterhead"
+                        href="#quarter" role="button" aria-expanded="false" aria-controls="collapseExample"
+                        style="width: 100%;">
+                        ตามไตรมาส<span class="material-symbols-outlined">arrow_drop_down</span>
+                    </a><br>
+                    <div class="collapse" id="quarter">
 
-        <hr>
-        <a class="d-flex align-items-center" href="./index.html" style="display: flex;"><span
-                class="material-symbols-outlined">home</span>&nbsp;<label for="" id="homepage"
-                hidden>หน้าหลัก</label></a>
-        <hr>
-        <a class="d-flex align-items-center" href="./evaluate_status.html" style="display: flex;"><span
-            class="material-symbols-outlined">summarize</span>&nbsp;<label for="" id="report"
-            hidden>ผลการประเมิน</label></a>
-    <hr>
-        <a class="d-flex align-items-center" href="./formconfix.html" style="display: flex;"><span
-                class="material-symbols-outlined">settings</span>&nbsp;<label for="" id="setting"
-                hidden>ตั้งค่า</label></a>
-        <hr>
-        <a class="d-flex align-items-center" href="./login.html" style="display: flex;"><span
-                class="material-symbols-outlined">logout</span>&nbsp;<label for="" id="logout"
-                hidden>ออกจากระบบ</label></a>
-        <hr>
-    </div>
-    <!-- ----------------------------------------------END NAV------------------------------------------------------ -->
-    <!-- ----------------------------------------------content---------------------------------------------- -->
-    <div id="content">
-        <h4 class="header">สถานะการทำแบบประเมิน ร้านสาขา SBP</h4>
-        <button type="button" class="btn btn-secondary d-flex justify-content-center" data-bs-toggle="modal"
-            data-bs-target="#configview" id="resultselect"><span
-                class="material-symbols-outlined">settings</span>เลือกผลการประเมิน</button>
-        <table class="table " id="totalcheck">
-            <thead>
-                <tr>
-                    <th scope="col">รหัสสาขา</th>
-                    <th scope="col">ชื่อสาขา</th>
-                    <th scope="col">FC ประเมิน</th>
-                    <th scope="col">บัญชี ประเมิน</th>
-                    <th scope="col">Audit ประเมิน</th>
-                    <th scope="col">ดูรายงาน</th>
-                </tr>
-            </thead>
-            <tbody>
+                        <input class="form-check-input" type="checkbox" value="" id="quarter1" onclick="opensubmit()">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            ไตรมาสที่ 1
+                        </label>
 
-            </tbody>
-        </table>
-    </div>
-    
-    <!-- Modal -->
-    <div class="modal fade" id="configview" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">เลือกช่วงเวลาสำหรับดูการประเมินผล</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+                        <input class="form-check-input" type="checkbox" value="" id="quarter2" onclick="opensubmit()">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            ไตรมาสที่ 2
+                        </label>
 
-                    <form>
-                        <a class="btn btn-light d-flex justify-content-center" data-bs-toggle="collapse"
-                            id="quarterhead" href="#quarter" role="button" aria-expanded="false"
-                            aria-controls="collapseExample" style="width: 100%;">
-                            ตามไตรมาส<span class="material-symbols-outlined">arrow_drop_down</span>
-                        </a><br>
-                        <div class="collapse" id="quarter">
+                        <input class="form-check-input" type="checkbox" value="" id="quarter3" onclick="opensubmit()">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            ไตรมาสที่ 3
+                        </label>
 
-                            <input class="form-check-input" type="checkbox" value="" id="quarter1"
-                                onclick="opensubmit()">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                ไตรมาสที่ 1
-                            </label>
+                        <input class="form-check-input" type="checkbox" value="" id="quarter4" onclick="opensubmit()">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            ไตรมาสที่ 4
+                        </label>
 
-                            <input class="form-check-input" type="checkbox" value="" id="quarter2"
-                                onclick="opensubmit()">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                ไตรมาสที่ 2
-                            </label>
+                    </div><br>
 
-                            <input class="form-check-input" type="checkbox" value="" id="quarter3"
-                                onclick="opensubmit()">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                ไตรมาสที่ 3
-                            </label>
+                    <a class="btn btn-light d-flex justify-content-center" data-bs-toggle="collapse" id="monthheader"
+                        href="#month" role="button" aria-expanded="false" aria-controls="collapseExample"
+                        style="width: 100%;">
+                        ตามเดือน<span class="material-symbols-outlined">arrow_drop_down</span>
+                    </a>
+                    <div class="collapse" id="month">
 
-                            <input class="form-check-input" type="checkbox" value="" id="quarter4"
-                                onclick="opensubmit()">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                ไตรมาสที่ 4
-                            </label>
-
-                        </div><br>
-
-                        <a class="btn btn-light d-flex justify-content-center" data-bs-toggle="collapse"
-                            id="monthheader" href="#month" role="button" aria-expanded="false"
-                            aria-controls="collapseExample" style="width: 100%;">
-                            ตามเดือน<span class="material-symbols-outlined">arrow_drop_down</span>
-                        </a>
-                        <div class="collapse" id="month">
-
-                            <select class="form-select" aria-label="Default select example" onclick="opensubmit()">
-                                <option selected>เลือกเดือนที่จะดูข้อมูล</option>
-                                <option value="1">มกราคม</option>
-                                <option value="2">กุมภาพันธ์</option>
-                                <option value="3">มีนาคม</option>
-                                <option value="4">เมษายน</option>
-                                <option value="5">พฤษภาคม</option>
-                                <option value="6">มิถุนายน</option>
-                                <option value="7">กรกฎาคม</option>
-                                <option value="8">สิงหาคม</option>
-                                <option value="9">กันยายน</option>
-                                <option value="10">ตุลาคม</option>
-                                <option value="11">พฤศจิกายน</option>
-                                <option value="12">ธันวาคม</option>
-                            </select>
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
-                    <button type="submit" class="btn btn-primary" id="submittime" disabled>ค้นหา</button>
-                </div>
-                </form>
+                        <select class="form-select" aria-label="Default select example" onclick="opensubmit()">
+                            <option selected>เลือกเดือนที่จะดูข้อมูล</option>
+                            <option value="1">มกราคม</option>
+                            <option value="2">กุมภาพันธ์</option>
+                            <option value="3">มีนาคม</option>
+                            <option value="4">เมษายน</option>
+                            <option value="5">พฤษภาคม</option>
+                            <option value="6">มิถุนายน</option>
+                            <option value="7">กรกฎาคม</option>
+                            <option value="8">สิงหาคม</option>
+                            <option value="9">กันยายน</option>
+                            <option value="10">ตุลาคม</option>
+                            <option value="11">พฤศจิกายน</option>
+                            <option value="12">ธันวาคม</option>
+                        </select>
+                    </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="submit" class="btn btn-primary" id="submittime" disabled>ค้นหา</button>
+            </div>
+            </form>
         </div>
     </div>
+</div>
 
-    <script src="../static/javascript/Sbpadmincheck.js"></script>
-</body>
-
-</html>
+<script src="../static/javascript/Sbpadmincheck.js"></script>
+{% endblock %}

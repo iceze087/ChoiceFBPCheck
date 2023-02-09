@@ -3,6 +3,9 @@ function sidenav() {
   document.getElementById("sidenav").style.width = "200px";
   document.getElementById("homepage").hidden = false;
   document.getElementById("report").hidden = false;
+  document.getElementById("noti").hidden = false;
+  document.getElementById("score").hidden = false;
+  document.getElementById('empname').hidden = false;
   document.getElementById("setting").hidden = false;
   document.getElementById("logout").hidden = false;
   document.getElementById("content").style.marginLeft = "200px";
@@ -13,12 +16,16 @@ function closeNav() {
   document.getElementById("sidenav").style.width = "60px";
   document.getElementById("homepage").hidden = true;
   document.getElementById("report").hidden = true;
+  document.getElementById("noti").hidden = true;
+  document.getElementById("score").hidden = true;
+  document.getElementById('empname').hidden = true;
   document.getElementById("setting").hidden = true;
   document.getElementById("logout").hidden = true;
   document.getElementById("content").style.marginLeft = "5px";
   document.getElementById("navclose").hidden = true;
   document.getElementById("opennavs").hidden = false;
 }
+// ------------------------------END sidenav function---------------------------
 // ------------------------------END sidenav function---------------------------
 
 // ------------------------------------ ScreenCheck --------------------------------
@@ -161,69 +168,69 @@ var Audit = [
 // ------------------------------------ END DataSet --------------------------------
 
 // ------------------------------------ Show Form TD --------------------------------
-runfbp();
-runaccount();
-runaudit();
+// runfbp();
+// runaccount();
+// runaudit();
 
-function runfbp(){
-  FBP.map((FBPList, index) => {
-      var table = document.getElementById("FBPConfig");
-    var row = table.insertRow(-1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    cell1.innerHTML = FBP[index].name;
-    cell2.innerHTML =
-      ' <input class="form-check-input" type="checkbox" value="" name="' +
-      FBP[index].name +
-      '" id="' +
-      FBP[index].name +
-      '">';
-    cell3.innerHTML = FBP[index].score; 
-    cell4.innerHTML = '<button type="button" class="btn btn-warning" onclick="scoreedit('+'\''+FBP[index].name+'\''+')" data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button>';
-  });
-}
+// function runfbp(){
+//   FBP.map((FBPList, index) => {
+//       var table = document.getElementById("FBPConfig");
+//     var row = table.insertRow(-1);
+//     var cell1 = row.insertCell(0);
+//     var cell2 = row.insertCell(1);
+//     var cell3 = row.insertCell(2);
+//     var cell4 = row.insertCell(3);
+//     cell1.innerHTML = FBP[index].name;
+//     cell2.innerHTML =
+//       ' <input class="form-check-input" type="checkbox" value="" name="' +
+//       FBP[index].name +
+//       '" id="' +
+//       FBP[index].name +
+//       '">';
+//     cell3.innerHTML = FBP[index].score; 
+//     cell4.innerHTML = '<button type="button" class="btn btn-warning" onclick="scoreedit('+'\''+FBP[index].name+'\''+')" data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button>';
+//   });
+// }
 
-function runaccount(){
-  Account.map((AccountList, index) => {
-      var table = document.getElementById("AccountConfig");
-      var row = table.insertRow(-1);
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      cell1.innerHTML = Account[index].name;
-      cell2.innerHTML =
-        ' <input class="form-check-input" type="checkbox" value="" name="' +
-        Account[index].name +
-        '" id="' +
-        Account[index].name +
-        '">';
-      cell3.innerHTML = Account[index].score; 
-      cell4.innerHTML = '<button type="button" class="btn btn-warning" onclick="scoreedit('+'\''+Account[index].name+'\''+')" data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button>'
-  });
-}
+// function runaccount(){
+//   Account.map((AccountList, index) => {
+//       var table = document.getElementById("AccountConfig");
+//       var row = table.insertRow(-1);
+//       var cell1 = row.insertCell(0);
+//       var cell2 = row.insertCell(1);
+//       var cell3 = row.insertCell(2);
+//       var cell4 = row.insertCell(3);
+//       cell1.innerHTML = Account[index].name;
+//       cell2.innerHTML =
+//         ' <input class="form-check-input" type="checkbox" value="" name="' +
+//         Account[index].name +
+//         '" id="' +
+//         Account[index].name +
+//         '">';
+//       cell3.innerHTML = Account[index].score; 
+//       cell4.innerHTML = '<button type="button" class="btn btn-warning" onclick="scoreedit('+'\''+Account[index].name+'\''+')" data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button>'
+//   });
+// }
 
-function runaudit(){
-  Audit.map((AuditList, index) => {
-    var table = document.getElementById("AuditConfig");
-    var row = table.insertRow(-1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    cell1.innerHTML = Audit[index].name;
-    cell2.innerHTML =
-      ' <input class="form-check-input" type="checkbox" value="" name="' +
-      Audit[index].name +
-      '" id="' +
-      Audit[index].name +
-      '">';
-    cell3.innerHTML = Audit[index].score; 
-    cell4.innerHTML = '<button type="button" class="btn btn-warning" onclick="scoreedit('+'\''+Audit[index].name+'\''+')" data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button>'
-  });
-}
+// function runaudit(){
+//   Audit.map((AuditList, index) => {
+//     var table = document.getElementById("AuditConfig");
+//     var row = table.insertRow(-1);
+//     var cell1 = row.insertCell(0);
+//     var cell2 = row.insertCell(1);
+//     var cell3 = row.insertCell(2);
+//     var cell4 = row.insertCell(3);
+//     cell1.innerHTML = Audit[index].name;
+//     cell2.innerHTML =
+//       ' <input class="form-check-input" type="checkbox" value="" name="' +
+//       Audit[index].name +
+//       '" id="' +
+//       Audit[index].name +
+//       '">';
+//     cell3.innerHTML = Audit[index].score; 
+//     cell4.innerHTML = '<button type="button" class="btn btn-warning" onclick="scoreedit('+'\''+Audit[index].name+'\''+')" data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button>'
+//   });
+// }
 
 
 // ------------------------------------ END Show Form TD --------------------------------

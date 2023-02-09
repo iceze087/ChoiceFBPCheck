@@ -1,0 +1,433 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="export">
+    <h4 class="employeeheader">ดาวน์โหลดรายชื่อพนักงาน</h4>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-10">
+                <select class="form-select" aria-label="Default select example" name="bcode" id="bcode">
+                    <option value="1">2119_สถานีรถไฟเชียงใหม่</option>
+                    <option value="2">2789_กาดอินทร</option>
+                    <option value="3">7192_แม่แจ่ม</option>
+                </select>
+            </div>
+            <div class="col-6 col-sm-6 col-md-2">
+                <button type="button" class="btn btn-outline-primary d-flex" id="exportemp"><span
+                        class="material-symbols-sharp">export_notes</span>&emsp;Export</button>
+            </div>
+        </div>
+    </div>
+</div><br>
+<div id="content">
+    <h4 class="employeeheader">รายชื่อพนักงาน ร้านสาขา SBP</h4>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><span class="material-symbols-sharp">person_add</span></span>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#modal-add">เพิ่มพนักงาน</button>
+    </div>
+
+    <table class="table " id="emplist">
+        <thead>
+            <tr>
+                <th scope="col">สาขา</th>
+                <th scope="col">ชื่อ</th>
+                <th scope="col">นามสกุล</th>
+                <th scope="col">จัดการ</th>
+                <th scope="col">อบรม</th>
+                <th scope="col">รหัสประชาชน</th>
+                <th scope="col">ตำแหน่ง</th>
+                <th scope="col">เบอร์มือถือ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>14369</td>
+                <td>จักรธร</td>
+                <td>พินสมพงษ์</td>
+                <td><button type="button" class="btn btn-success d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#modal-add"><span class="material-symbols-sharp">settings</span></button></td>
+                <td><span class="material-symbols-sharp" style="color: green; font-size: 2rem;">task_alt</span></td>
+                <td>3130300458324</td>
+                <td>เจ้าของ SBP</td>
+                <td>0818815098</td>
+            </tr>
+            <tr>
+                <td>2119</td>
+                <td>ศุลีพร</td>
+                <td>อนุเศรษฐพงศ์</td>
+                <td><button type="button" class="btn btn-success d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#modal-add"><span class="material-symbols-sharp">settings</span></button></td>
+                <td><span class="material-symbols-sharp" style="color: red; font-size: 2rem;">cancel</span></td>
+                <td>3500990013778</td>
+                <td>เจ้าของ SBP</td>
+                <td>0818832388</td>
+            </tr>
+            <tr>
+                <td>6114</td>
+                <td>พรนิภา</td>
+                <td>คำแดง</td>
+                <td><button type="button" class="btn btn-success d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#modal-add"><span class="material-symbols-sharp">settings</span></button></td>
+                <td><span class="material-symbols-sharp" style="color: red; font-size: 2rem;">cancel</span></td>
+                <td>1509901268463</td>
+                <td>ผู้ช่วยผู้จัดการ</td>
+                <td>0979206700</td>
+            </tr>
+            <tr>
+                <td>6181</td>
+                <td>กัญภัทร</td>
+                <td>สุขเงินนอน</td>
+                <td><button type="button" class="btn btn-success d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#modal-add"><span class="material-symbols-sharp">settings</span></button></td>
+                <td><span class="material-symbols-sharp" style="color: green; font-size: 2rem;">task_alt</span></td>
+                <td>2501801121411</td>
+                <td>พนักงาน</td>
+                <td>asd</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- -------------------- Modal Add ---------------------- -->
+<div class="modal fade" id="modal-add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">จัดการรายชื่อพนักงาน SBP</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form class="needs-validation" novalidate="" action="/sbp/employee" class="form-sample" data-toggle="validator" enctype="multipart/form-data"
+                    method="POST" role="form">
+                    <div class="modal-body">
+                        <div class="row" style="display:none">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">id</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="id" name="id" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">รหัสสาขา</label>
+                                <div class="col-sm-8">
+                                    <select class="form-select" id="addbcode" name="bcode" required="">
+                                        <option value="">กรุณาเลือก..</option>
+
+                                        <option value="2119">2119_สถานีรถไฟเชียงใหม่</option>
+
+                                        <option value="2789">2789_กาดอินทร</option>
+
+                                        <option value="3119">3119_ศิริมังคลาจารย์</option>
+
+                                        <option value="3189">3189_อบต.สุเทพ</option>
+
+                                        <option value="4059">4059_ไชยปราการ</option>
+
+                                        <option value="4301">4301_กาดอินทร 2</option>
+
+                                        <option value="7192">7192_แม่แจ่ม</option>
+
+                                        <option value="7379">7379_หารแก้ว</option>
+
+                                        <option value="7395">7395_ช่างเคี่ยน 2</option>
+
+                                        <option value="7930">7930_หน้ากาดเชิงดอย</option>
+
+                                        <option value="8017">8017_บ้านหลิ่งมื่น</option>
+
+                                        <option value="8160">8160_ไชยปราการ 2</option>
+
+                                        <option value="8409">8409_อบต.ริมเหนือ</option>
+
+                                        <option value="8468">8468_ซอยชมจันทร์</option>
+
+                                        <option value="8898">8898_บิสสิเนสพาร์ค</option>
+
+                                        <option value="8961">8961_บ้านสันทรายหลวง</option>
+
+                                        <option value="8962">8962_ถนนโพธาราม(เชียงใหม่)</option>
+
+                                        <option value="9219">9219_เชียงใหม่แลนด์1</option>
+
+                                        <option value="9360">9360_บ้านเอื้ออาทรสันผีเสื้อ</option>
+
+                                        <option value="9548">9548_หน้ารพ.สันทราย</option>
+
+                                        <option value="9635">9635_บ้านนิคมศรีสหกรณ์</option>
+
+                                        <option value="9637">9637_บ้านป่าข่อยใต้</option>
+
+                                        <option value="5094">5094_ศรีดอนไชย1</option>
+
+                                        <option value="5093">5093_ศรีปิงเมือง 2</option>
+
+                                        <option value="5147">5147_ตลาดแม่กวง</option>
+
+                                        <option value="5285">5285_บุญเรืองฤทธิ์</option>
+
+                                        <option value="5463">5463_บ้านต้นเกว๋น</option>
+
+                                        <option value="5724">5724_บ้านสันกลาง (อ.สันกำแพง)</option>
+
+                                        <option value="5870">5870_บ้านบวกครกเหนือ</option>
+
+                                        <option value="6073">6073_บ้านสันทรายทอง 2</option>
+
+                                        <option value="6181">6181_แม่เหี๊ยะ3</option>
+
+                                        <option value="6200">6200_เจ็ดยอดพลาซ่า</option>
+
+                                        <option value="6236">6236_บ้านสันต้นธง (จ.ลำพูน )</option>
+
+                                        <option value="10068">10068_หนองฮ่อ</option>
+
+                                        <option value="10693">10693_ปาย 5</option>
+
+                                        <option value="10737">10737_เชียงใหม่บิสสิเนสพาร์ค 2</option>
+
+                                        <option value="10995">10995_ป่าแดด 4 (บ้านท่าใหม่อิ)</option>
+
+                                        <option value="11103">11103_หน้าม.ช.2</option>
+
+                                        <option value="11543">11543_โครงการเดอะฟิวชั่น(บ้านท่อ)</option>
+
+                                        <option value="11656">11656_บ้านเชิงดอย(ถ.สุเทพ)</option>
+
+                                        <option value="11949">11949_บ้านขอนตาล(อ.แม่ริม)</option>
+
+                                        <option value="13239">13239_ซอยวัดอุโมงค์3</option>
+
+                                        <option value="13285">13285_บ้านป่าแคโยง(อ.สารภี)</option>
+
+                                        <option value="14120">14120_บ่อสร้าง2</option>
+
+                                        <option value="14121">14121_บ้านหนองบัว(อ.ฝาง)</option>
+
+                                        <option value="14154">14154_บ้านปากทางสะลวง(อ.แม่ริม)</option>
+
+                                        <option value="14369">14369_บ้านป่าตัน2</option>
+
+                                        <option value="14861">14861_บ้านท่าข้าม(ต.แม่เหียะ)</option>
+
+                                        <option value="16162">16162_บ้านช่างเคิ่งบน(อ.แม่แจ่ม)</option>
+
+                                        <option value="16325">16325_บ้านป่าลาน(อ.สันทราย)</option>
+
+                                        <option value="16685">16685_บ้านดอนชัย (ต.ป่าแดด)</option>
+
+                                        <option value="17819">17819_บ้านดอนแก้ว(อ.สารภี)</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>ข้อมูลส่วนตัว</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" id="nameinput">
+                                <div id="name_last">
+                                    <label class="col-2" for="">ชื่อ</label>
+                                    <div class="input-group">
+                                        <select class="form-select" aria-label="Default select example" id="prefix_name"
+                                            name="prefix_name" required="" style="width:30%;">
+                                            <option value="">กรุณาเลือก..</option>
+                                            <option value="นาย">นาย</option>
+                                            <option value="นาง">นาง</option>
+                                            <option value="นางสาว">นางสาว</option>
+                                        </select>
+                                        <input class="form-control" id="fname_th" name="fname_th" pattern="[ก-๏\s]+$"
+                                            required="" style="width:70%" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-12" id="lnameinput">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">นามสกุล</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="lname_th" name="lname_th" pattern="[ก-๏\s]+$"
+                                            required="" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="engname">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Name</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="fname_en" name="fname_en" pattern="[A-Za-z\s]+$"
+                                            required="" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Surname</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="lname_en" name="lname_en" pattern="[A-Za-z\s]+$"
+                                            required="" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row" id="personalid">
+                            <label class="col-sm-3 col-form-label">รหัสประชาชน</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="id_card" maxlength="13" minlength="13" name="id_card"
+                                    pattern="\d*" required="" type="text">
+                            </div>
+                        </div>
+
+                        <div class="row" id="brithday">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">วันเกิด</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control min-today" id="bdate" name="bdate" required=""
+                                            type="date" max="2023-02-09">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">E-mail</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="email" name="email" type="email">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+   
+                            <div class="form-group row" id="pnumber">
+                                <label class="col-sm-3 col-form-label">เบอร์มือถือ</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="tel_phone" maxlength="10" minlength="10"
+                                        name="tel_phone" pattern="\d*" required="" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">การศึกษา</label>
+                                <div class="col-sm-9">
+                                    <select class="form-select" id="education" name="education" required="">
+                                        <option value="">กรุณาเลือก..</option>
+                                        <option value="ประถมศึกษาปีที่ 6">ประถมศึกษาปีที่ 6</option>
+                                        <option value="มัธยมศึกษาปีที่ 3">มัธยมศึกษาปีที่ 3</option>
+                                        <option value="มัธยมศึกษาปีที่ 6">มัธยมศึกษาปีที่ 6</option>
+                                        <option value="ประกาศนียบัตรวิชาชีพปี 3">ประกาศนียบัตรวิชาชีพปี 3
+                                        </option>
+                                        <option value="ประกาศนียบัตรวิชาชีพชั้นสูงปี 2">
+                                            ประกาศนียบัตรวิชาชีพชั้นสูงปี 2</option>
+                                        <option value="ปริญญาตรี">ปริญญาตรี</option>
+                                        <option value="ปริญญาโท">ปริญญาโท</option>
+                                        <option value="ปริญญาเอก">ปริญญาเอก</option>
+                                    </select>
+                                </div>
+                            </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>ข้อมูลพนักงาน</h4>
+                        </div>
+                    </div>
+
+                        <div class="col-12" id="position">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">ตำแหน่ง</label>
+                                <div class="col-sm-9">
+                                    <select class="form-select"  id="position" name="position" required="">
+                                        <option value="">กรุณาเลือก..</option>
+                                        <option value="พนักงาน">พนักงาน</option>
+                                        <option value="พนักงานพาร์ทไทม์">พนักงานพาร์ทไทม์</option>
+                                        <option value="ผู้ช่วยผู้จัดการ">ผู้ช่วยผู้จัดการ</option>
+                                        <option value="ผู้จัดการ">ผู้จัดการ</option>
+                                        <option value="เจ้าของ SBP">เจ้าของ SBP</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12" id="empid">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">รหัสพนักงาน</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="em_code" name="em_code" pattern="\d*" required=""
+                                        type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">การฝึกอบรม</label>
+                                <div class="col-sm-4 col-6">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="train" id="train1"
+                                                value="Y" required="" style="font-size: 1.2rem; border-color: black;">
+                                            ผ่าน 
+                                            <i class="input-helper"></i><i class="input-helper"></i></label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-6">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="train" id="train2"
+                                                value="N" required="" style="font-size: 1.2rem; border-color: black;">
+                                            ไม่ผ่าน
+                                            <i class="input-helper"></i><i class="input-helper"></i></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12" id="workstart">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">วันเริ่มงาน</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control min-today" id="start_date" name="start_date" type="date"
+                                        value="" required="" max="2023-02-09">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">วันออกงาน</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="end_date" name="end_date" type="date" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-success" id="submit" name="submit" type="submit"
+                    value="insert">บันทึก</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+            </div>
+            </form>
+
+        </div>
+        
+    </div>
+</div>
+</div>
+<!-- --------------------------------------------------------- -->
+<script src="/static/javascript/employee.js"></script>
+{% endblock %}

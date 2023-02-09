@@ -52,7 +52,28 @@ function checkscreen() {
   }
 }
 // ------------------------------------ END ScreenCheck --------------------------------
+(() => {
+  'use strict'
 
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+              Swal.fire(
+                  'กรอกข้อมูลไม่ครบถ้วน',
+                  'รายละเอียดงาน , ภาพงานก่อสร้ง , วันที่ตรวจงานซ้ำ',
+                  'error'
+                )
+          }
+          form.classList.add('was-validated')
+      }, false)
+  })
+})()
 // ------------------------------------ DataSet --------------------------------
 var Audit = [
   {
@@ -117,15 +138,16 @@ for(var b = 0 ; b < branch.length; b++){
     document.getElementById('showbdetail').innerHTML = 'ร้านสาขาที่ : ' + branch[b].id + ' ' + branch[b].name
   }
 }
-Audit.map((AuditList, index) => {
-  var table = document.getElementById("AccountForm");
-  var row = table.insertRow(-1);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
 
-  cell1.innerHTML = Audit[index].name;
-  cell2.innerHTML = '<div class="scoretag"><label id="' +Audit[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + Audit[index].range + '" id="' + Audit[index].name + '" onchange="showvalue('+'\''+Audit[index].id+'\''+', id)">';
-});
+// Audit.map((AuditList, index) => {
+//   var table = document.getElementById("AccountForm");
+//   var row = table.insertRow(-1);
+//   var cell1 = row.insertCell(0);
+//   var cell2 = row.insertCell(1);
+
+//   cell1.innerHTML = Audit[index].name;
+//   cell2.innerHTML = '<div class="scoretag"><label id="' +Audit[index].id + '" class="range-value"></label></div><input type="range" class="form-range" min="1" max="' + Audit[index].range + '" id="' + Audit[index].name + '" onchange="showvalue('+'\''+Audit[index].id+'\''+', id)">';
+// });
 
 // ------------------------------------ END Show Form TD --------------------------------
 function showvalue(id , name){
