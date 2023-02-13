@@ -91,7 +91,7 @@
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center" href="./login" style="display: flex;"><span
+                            <a class="d-flex align-items-center" onclick="signout()" style="display: flex;"><span
                                     class="material-symbols-outlined">logout</span>&nbsp;<label
                                     for="">ออกจากระบบ</label></a>
                         </li>
@@ -131,7 +131,7 @@
                 class="material-symbols-outlined">settings</span>&nbsp;<label for="" id="setting"
                 hidden>ตั้งค่า</label></a>
         <hr>
-        <a class="d-flex align-items-center" href="./login" style="display: flex;"><span
+        <a class="d-flex align-items-center" onclick="signout()"  style="display: flex;"><span
                 class="material-symbols-outlined">logout</span>&nbsp;<label for="" id="logout"
                 hidden>ออกจากระบบ</label></a>
         <hr>
@@ -142,5 +142,4 @@
     <!-- ----------------------------------------------END content---------------------------------------------- -->
    {% extends "speed_dial.html" %}
 </body>
-
 </html>

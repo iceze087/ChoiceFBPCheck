@@ -359,3 +359,25 @@ function commitadd(){
   }
 }
 // ------------------------------------ END Addlist --------------------------------
+function signout(){
+  Swal.fire({
+      title: 'ออกจากระบบ',
+      text: "ต้องการจะออกจากระบบหรือไม่?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'ออกจากระบบ',
+      cancelButtonText: 'ยกเลิก',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'ออกจากระบบ',
+          'ทำการออกจากระบบแล้ว',
+          'success'
+        ).then(() => {
+          window.location = "./login";
+      })
+      }
+    })
+}
