@@ -22,11 +22,15 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td>2.1 อัตรากำลังคนรวมครบตามโครงสร้าง</td>
+                    <td>2.1 อัตรากำลังคนรวม (คน)</td>
                     <td>
-                        <div class="scoretag"><label id="f2" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5" id="2.1  อัตรากำลังคนรวมครบตามโครงสร้าง"
-                            onchange="showvalue('f2', id , value)" required >
+                        <select class="form-select" aria-label="Default select example" required name="fc2.1">
+                            <option selected></option>
+                            <option value="80">ครบ</option>
+                            <option value="40">ขาด 50% ของโครงสร้างจริง</option>
+                            <option value="20">ขาด 75% ของโครงสร้างจริง</option>
+                            <option value="0">ไม่ครบ 100%</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
@@ -34,106 +38,96 @@
                         จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน
                     </td>
                     <td>
-                        <div class="scoretag"><label id="f3" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3"
-                            id="2.2  จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน"
-                            onchange="showvalue('f3', id , value)" required>
+                        <select class="form-select" aria-label="Default select example" required name="fc2.2">
+                            <option selected></option>
+                            <option value="45">ขาด 1 คน ไม่เกิน 2 เดือน และส่งฝึกอบรมหรือ หรือมีเจตนาส่งอบรม</option>
+                            <option value="0">ไม่ปฏิบัติตามนี้</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
                     <td>2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน</td>
                     <td>
-                        <div class="scoretag"><label id="f4" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5"
-                            id="2.3  จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน"
-                            onchange="showvalue('f4', id , value)" required>
+                        <select class="form-select" aria-label="Default select example" required name="fc2.3">
+                            <option selected></option>
+                            <option value="45">มีการสอนและอบรมครบทุกคน</option>
+                            <option value="20">มีการสอนและอบรม ≥ 80 % ขึ้นไป</option>
+                            <option value="0">มีการสอนและอบรม < 80 %</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>2.4 การบริหารจัดการและการดูแลทีมงานในร้าน</td>
+                    <td>2.4 ไม่ออกกฏระเบียบข้อบังคับผิดเงือนไขที่บริษัทฯกำหนด</td>
                     <td>
-                        <div class="scoretag"><label id="f5" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3" id="2.4  การบริหารจัดการและการดูแลทีมงานในร้าน"
-                            onchange="showvalue('f5', id , value)" required>
+                        <select class="form-select" aria-label="Default select example" required name="fc2.4">
+                            <option selected></option>
+                            <option value="20">ปฏิบัติตามหลักเกณฑ์</option>
+                            <option value="0">ไม่ปฏิบัติตามหลักเกณฑ์</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม</td>
+                    <td>2.5 ปฎิบัติตามกฎระเบียบของบริษัทฯ</td>
                     <td>
-                        <div class="scoretag"><label id="f6" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3"
-                            id="2.5  จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม"
-                            onchange="showvalue('f6', id , value)" required>
+                        <select class="form-select" aria-label="Default select example" required name="fc2.5">
+                            <option selected></option>
+                            <option value="10">ปฎิบัติตามกฎระเบียบ</option>
+                            <option value="5">พบไม่ปฎิบัติตามกฎระเบียบ 1 เรื่อง</option>
+                            <option value="0">พบไม่ปฏิบัติตามกฎระเบียบ  2 เรื่องขึ้นไป</option>
+                          </select>
                     </td>
                 </tr>
-                <tr>
-                    <td>2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน</td>
-                    <td>
-                        <div class="scoretag"><label id="f7" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3"
-                            id="2.6  ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน"
-                            onchange="showvalue('f7', id , value)" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2.7 ส่งสำเนาทะเบียนลูกจ้าง</td>
-                    <td>
-                        <div class="scoretag"><label id="f8" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5" id="2.7  ส่งสำเนาทะเบียนลูกจ้าง"
-                            onchange="showvalue('f8', id , value)" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td><b>ความร่วมมือและการเอาใจใส่บริหารที่ร้านสาขา (100 คะแนน)</b></td>
-                    <td></td>
-                </tr>
-                <tr>
                     <td>3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ</td>
                     <td>
-                        <div class="scoretag"><label id="f10" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3" id="3.1  การดูแลมาตราฐานร้านอย่างสม่ำเสมอ"
-                            onchange="showvalue('f10', id , value)" required>
+                        <select class="form-select" aria-label="Default select example" required name="fc3.1">
+                            <option selected></option>
+                            <option value="20">แก้ไข/ปรับปรุงตามAction List ครบทุกหัวข้อที่มีการบันทึก</option>
+                            <option value="10">แก้ไข/ปรับปรุงตาม Action List บางหัวข้อที่มีการบันทึก</option>
+                            <option value="0">ไม่มีการแก้ไข</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ</td>
+                    <td>3.2 การสั่งสินค้าผ่านระบบ Online</td>
                     <td>
-                        <div class="scoretag"><label id="f11" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5" id="3.2  การให้ความร่วมมือในการบริหารงานขายต่าง ๆ"
-                            onchange="showvalue('f11', id , value)" required>
+                        <select class="form-select" aria-label="Default select example" required name="fc3.2">
+                            <option selected></option>
+                            <option value="20">Online ครบ 100%</option>
+                            <option value="10">Online ≥ 95%</option>
+                            <option value="0">Online < 95%</option>
+                          </select>
+                    </td>
+                </tr>
+                    <td>3.3 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท</td>
+                    <td>
+                        <select class="form-select" aria-label="Default select example" required name="fc3.3">
+                            <option selected></option>
+                            <option value="30">ให้ความร่วมมือทุกโครงการ</option>
+                            <option value="15">ให้ความร่วมมือบางโครงการ</option>
+                            <option value="0">ไม่ให้ความร่วมมือ</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>3.3 การสั่งสินค้าผ่านระบบ Online</td>
+                    <td>3.4 ความร่วมมือในการประชุมกับทีม OPT</td>
                     <td>
-                        <div class="scoretag"><label id="f12" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5" id="3.3  การสั่งสินค้าผ่านระบบ Online"
-                            onchange="showvalue('f12', id , value)" required>
+                        <select class="form-select" aria-label="Default select example" required name="fc3.4">
+                            <option selected></option>
+                            <option value="30">ให้ความร่วมมือทุกครั้ง</option>
+                            <option value="15">≥ 80 % ขึ้นไป</option>
+                            <option value="0">< 80%</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท</td>
+                    <td>3.5 ไม่เคยได้รับหนังสือขอความร่วมมือ</td>
                     <td>
-                        <div class="scoretag"><label id="f13" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5"
-                            id="3.4  การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท"
-                            onchange="showvalue('f13', id , value)" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3.5 ความร่วมมือในการประชุมกับทีม OPT</td>
-                    <td>
-                        <div class="scoretag"><label id="f14" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3" id="3.5  ความร่วมมือในการประชุมกับทีม OPT"
-                            onchange="showvalue('f14', id , value)" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ</td>
-                    <td>
-                        <div class="scoretag"><label id="f15" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3" id="3.6  ไม่เคยได้รับหนังสือขอความร่วมมือ"
-                            onchange="showvalue('f15', id , value)" required>
+                        <select class="form-select" aria-label="Default select example" required name="fc3.5">
+                            <option selected></option>
+                            <option value="30">ไม่เคยได้รับเลย</option>
+                            <option value="15">ได้รับหนังสือขอความร่วมมือจากผู้จัดการฝ่าย หักใบละ (หมายเหตุ ได้รับจาก FC เรื่องเดียวกัน 2 ครั้ง = 1 ใบ ของผจก.ฝ่าย)</option>
+                            <option value="0">กรณีถ้า SBP ปฏิเสธ,ไม่เซ็นต์</option>
+                          </select>
                     </td>
                 </tr>
             </tbody>

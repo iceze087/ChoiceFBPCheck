@@ -1,3 +1,4 @@
+$("input[type='date']").keydown(function (event) { event.preventDefault(); });
 // ------------------------------sidenav function------------------------------
 function sidenav() {
   document.getElementById("sidenav").style.width = "200px";
@@ -50,6 +51,30 @@ function checkscreen() {
     document.getElementById("projectname").style.fontSize = "1.8rem";
   }
 }
+// ------------------------------------ END ScreenCheck --------------------------------
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+              Swal.fire(
+                  'กรอกข้อมูลไม่ครบถ้วน',
+                  'กรุณาตรวจสอบข้อมูลให้ครบถ้วน',
+                  'error'
+                )
+          }
+
+          form.classList.add('was-validated')
+      }, false)
+  })
+})()
 
 // ------------------------------------ DataSet --------------------------------
 var FBP = [
@@ -238,10 +263,10 @@ var Audit = [
 // --------------------------------------- Edit Score --------------------------------------
 var newscore
 var startdate
-function scoreedit(name){
-  console.log(name)
-  document.getElementById('scoreheader').innerHTML = name;
-}
+// function scoreedit(name){
+//   console.log(name)
+//   document.getElementById('scoreheader').innerHTML = name;
+// }
 function getnewscore(){
   newscore = document.getElementById('score').value;
   startdate = document.getElementById('startdate').value;

@@ -9,12 +9,12 @@
             <span class="material-symbols-outlined">add_box</span>เพิ่มหัวข้อการประเมิน
         </button>
     </div>
-    <form>
+    <form class="needs-validation" novalidate="">
         <div class="setting">
             <button class="btn btn-warning d-flex justify-content-center" type="button" data-bs-toggle="collapse"
                 data-bs-target="#FBPcollapse" id="settingcollapse" aria-expanded="false"
                 aria-controls="collapseExample">
-                การบริหารงานที่ร้านสาขา<span class="material-icons">keyboard_double_arrow_down</span>
+                การบริหารงานที่ร้านสาขา<span class="material-symbols-outlined">arrow_drop_down</span>
             </button>
             <div class="collapse" id="FBPcollapse">
                 <div class="card card-body">
@@ -26,150 +26,110 @@
                                 <th scope="col">คะแนน</th>
                                 <th scope="col">แก้ไขคะแนน</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
-                                <td>2.1 อัตรากำลังคนรวมครบตามโครงสร้าง</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.1 อัตรากำลังคนรวมครบตามโครงสร้าง"
-                                        id="2.1 อัตรากำลังคนรวมครบตามโครงสร้าง"></td>
-                                <td>40</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.1 อัตรากำลังคนรวมครบตามโครงสร้าง')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td>2.1 อัตรากำลังคนรวม (คน)</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc2.1"
+                                        id="checkfc2.1">
+                                </td>
+                                <td>80</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc2.1">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
                                 <td>2.2
                                     จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน
                                 </td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.2 จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน"
-                                        id="2.2 จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน">
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc2.2"
+                                        id="checkffc2.2">
                                 </td>
-                                <td>20</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.2 จำนวนผู้ช่วยผุ้จัดการร้านและ/หรือหัวหน้าผลัดที่ผ่านการอบรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td>45</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc2.2">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
                                 <td>2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน"
-                                        id="2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน"></td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc2.3"
+                                        id="checkffc2.3">
+                                </td>
+                                <td>45</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc2.3">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.4 ไม่ออกกฎระเบียบข้อบังคับผิดเงื่อนไขที่ บริษัทฯ กำหนด</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc2.4"
+                                        id="checkffc2.4">
+                                </td>
                                 <td>20</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.3 จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc2.4">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
-                                <td>2.4 การบริหารจัดการและการดูแลทีมงานในร้าน</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.4 การบริหารจัดการและการดูแลทีมงานในร้าน"
-                                        id="2.4 การบริหารจัดการและการดูแลทีมงานในร้าน"></td>
-                                <td>20</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.4 การบริหารจัดการและการดูแลทีมงานในร้าน')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
-                            </tr>
-                            <tr>
-                                <td>2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม"
-                                        id="2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม"></td>
-                                <td>10</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.5 จ้างงานตามกฎหมายแรงงานและจัดทำสวัสดิการประกันสังคม')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
-                            </tr>
-                            <tr>
-                                <td>2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน"
-                                        id="2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน"></td>
-                                <td>15</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.6 ไม่ออกกฎผิดเงื่อนไขที่บริษัทกำหนด และไม่จ้างงานตามกฎหมายแรงงาน')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
-                            </tr>
-                            <tr>
-                                <td>2.7 ส่งสำเนาทะเบียนลูกจ้าง</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.7 ส่งสำเนาทะเบียนลูกจ้าง" id="2.7 ส่งสำเนาทะเบียนลูกจ้าง"></td>
-                                <td>10</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.7 ส่งสำเนาทะเบียนลูกจ้าง')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
-                            </tr>
-                            <tr>
-                                <td>3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ"
-                                        id="3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ"></td>
-                                <td>15</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('3.1 การดูแลมาตราฐานร้านอย่างสม่ำเสมอ')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
-                            </tr>
-                            <tr>
-                                <td>3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ"
-                                        id="3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ"></td>
-                                <td>15</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('3.2 การให้ความร่วมมือในการบริหารงานขายต่าง ๆ')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
-                            </tr>
-                            <tr>
-                                <td>3.3 การสั่งสินค้าผ่านระบบ Online</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="3.3 การสั่งสินค้าผ่านระบบ Online" id="3.3 การสั่งสินค้าผ่านระบบ Online">
+                                <td>2.5 ปฏิบัติตามกฎระเบียบของบริษัทฯ</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc2.5"
+                                        id="checkffc2.5">
                                 </td>
                                 <td>10</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('3.3 การสั่งสินค้าผ่านระบบ Online')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc2.5">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+                            <tr>
+                                <td>3.1 การดูแลมาตรฐานร้านอย่างสม่ำเสมอ</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc3.1"
+                                        id="checkffc3.1">
+                                </td>
+                                <td>15</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc3.1">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
-                                <td>3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท"
-                                        id="3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท"></td>
+                                <td>3.2 การสั่งสินค้าผ่านระบบ Online</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc3.2"
+                                        id="checkffc3.2">
+                                </td>
+                                <td>15</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc3.2">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.3 การให้ความร่วมมือกับโครงการต่าง ๆ รวมถึงนโยบายใหม่ ๆ ของบริษัทฯ</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc3.3"
+                                        id="checkffc3.3">
+                                </td>
                                 <td>10</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('3.4 การให้ความร่วมมือกับโครงการต่างๆรวมถึงนโยบายใหม่ๆของบริษัท')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc3.3">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
-                                <td>3.5 ความร่วมมือในการประชุมกับทีม OPT</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="3.5 ความร่วมมือในการประชุมกับทีม OPT"
-                                        id="3.5 ความร่วมมือในการประชุมกับทีม OPT"></td>
+                                <td>3.4 ความร่วมมือในการประชุมกับทีมOPT</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc3.4"
+                                        id="checkffc3.4">
+                                </td>
+                                <td>10</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc3.4">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.5 ไม่เคยได้รับหนังสือขอความร่วมมือ</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkffc3.5"
+                                        id="checkffc3.5">
+                                </td>
                                 <td>20</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('3.5 ความร่วมมือในการประชุมกับทีม OPT')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#fc3.5">แก้ไขคะแนน</button></td>
                             </tr>
-                            <tr>
-                                <td>3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ"
-                                        id="3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ"></td>
-                                <td>30</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('3.6 ไม่เคยได้รับหนังสือขอความร่วมมือ')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
-                            </tr>
-                        </thead>
-                        <tbody>
-
                         </tbody>
                     </table>
                 </div>
             </div>
-
+            <!-- ---------------------------------------------------------------------------------------------------------------------- -->
             <button class="btn btn-warning btn btn-warning d-flex justify-content-center" type="button"
                 data-bs-toggle="collapse" data-bs-target="#Accountcollapse" id="settingcollapse" aria-expanded="false"
                 aria-controls="collapseExample">
-                การบริหารการเงินและบัญชี<span class="material-icons">keyboard_double_arrow_down</span>
+                การบริหารการเงินและบัญชี<span class="material-symbols-outlined">arrow_drop_down</span>
             </button>
             <div class="collapse" id="Accountcollapse">
                 <div class="card card-body">
@@ -181,97 +141,129 @@
                                 <th scope="col">คะแนน</th>
                                 <th scope="col">แก้ไขคะแนน</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
-                                <td>1.1 การ Online Receiving log</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="1.1 การ Online  Receiving log" id="1.1 การ Online  Receiving log"></td>
+                                <td>1.1 การ Online Receiving Log</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac1.1"
+                                        id="checkac1.1">
+                                </td>
                                 <td>5</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('1.1 การ Online  Receiving log')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac1.1">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
                                 <td>1.2 การ Online Cash Report</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="1.2 การ Online Cash Report" id="1.2 การ Online Cash Report"></td>
-                                <td>5</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('1.2 การ Online Cash Report')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
-                            </tr>
-                            <tr>
-                                <td>1.3 การจัดส่งเอกสาร Receiving Log</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="1.3 การจัดส่งเอกสาร Receiving Log" id="1.3 การจัดส่งเอกสาร Receiving Log">
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac1.2"
+                                        id="checkac1.2">
                                 </td>
                                 <td>5</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('1.3 การจัดส่งเอกสาร Receiving Log')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac1.2">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
-                                <td>1.4 การคีย์ข้อมูล Receiving Log</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="1.4 การคีย์ข้อมูล Receiving Log" id="1.4 การคีย์ข้อมูล Receiving Log">
+                                <td>1.3 การออนไลน์ข้อมูลสินค้ายกเลิกขาย</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac1.3"
+                                        id="checkac1.3">
                                 </td>
                                 <td>5</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('1.4 การคีย์ข้อมูล Receiving Log')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac1.3">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
-                                <td>1.5 การคีย์ข้อมูล Mark up / Down</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="1.5 การคีย์ข้อมูล Mark up / Down" id="1.5 การคีย์ข้อมูล Mark up / Down">
+                                <td>1.4 การจัดส่งเอกสาร Receiving Log</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac1.4"
+                                        id="checkac1.4">
                                 </td>
                                 <td>5</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('1.5 การคีย์ข้อมูล Mark up / Down')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac1.4">แก้ไขคะแนน</button></td>
                             </tr>
+                            <tr>
+                                <td>1.5 การคีย์ข้อมูล Receiving Log</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac1.5"
+                                        id="checkac1.5">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac1.5">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>1.6 การคีย์ข้อมูล Mark Up/Down</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac1.6"
+                                        id="checkac1.6">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac1.6">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <!-- ------------------------------------------------------------------------------------ -->
                             <tr>
                                 <td>2.1 ความร่วมมือในการตรวจนับเงินสด</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.1 ความร่วมมือในการตรวจนับเงินสด" id="2.1 ความร่วมมือในการตรวจนับเงินสด">
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac2.1"
+                                        id="checkac2.1">
                                 </td>
                                 <td>5</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.1 ความร่วมมือในการตรวจนับเงินสด')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac2.1">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
                                 <td>2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด"
-                                        id="2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด"></td>
-                                <td>5</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac2.2"
+                                        id="checkac2.2">
+                                </td>
+                                <td>20</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac2.2">แก้ไขคะแนน</button></td>
                             </tr>
                             <tr>
-                                <td>2.3 ความร่วมมือในการตรวจนับสินค้า</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="2.3 ความร่วมมือในการตรวจนับสินค้า" id="2.3 ความร่วมมือในการตรวจนับสินค้า">
+                                <td>2.3.1 วัดผลจากการให้ความร่วมมือในการตัดจ่ายสินค้ายกเลิกขาย(รูมศูนย์)</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac2.3.1"
+                                        id="checkac2.3.1">
                                 </td>
-                                <td>15</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('2.3 ความร่วมมือในการตรวจนับสินค้า')" data-bs-toggle="modal"
-                                        data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac2.3.1">แก้ไขคะแนน</button></td>
                             </tr>
+                            <tr>
+                                <td>2.3.2 วัดผลจากการให้ความร่วมมือในการติดตามสินค้า และเซนต์รับผลตรวจนับไม่เป็นทางการ
+                                </td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac2.3.2"
+                                        id="checkac2.3.2">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac2.3.2">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.3.3 วัดผลจากการให้ความร่วมมือในการจัดเรียงสินค้า และ Stock
+                                    ให้เป็นระเบียบเพื่อการตรวจนับและจัดแยกกลุ่มสินค้าเป็นหมวดหมู่</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac2.3.3"
+                                        id="checkac2.3.3">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac2.3.3">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.4 การจัดเก็บเอกสาร CASH REPORT และ R/L</td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac2.4"
+                                        id="checkac2.4">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac2.4">แก้ไขคะแนน</button></td>
+                            </tr>
+                            <!-- ----------------------------------------------------------------------------------------------------------- -->
                             <tr>
                                 <td>3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น."
-                                        id="3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น."></td>
-                                <td>10</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkac3.1"
+                                        id="checkac3.1">
+                                </td>
+                                <td>5</td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#ac3.1">แก้ไขคะแนน</button></td>
                             </tr>
-                        </thead>
-                        <tbody>
-
                         </tbody>
                     </table>
                 </div>
@@ -280,7 +272,7 @@
             <button class="btn btn-warning btn btn-warning d-flex justify-content-center" type="button"
                 data-bs-toggle="collapse" data-bs-target="#Auditcollapse" id="settingcollapse" aria-expanded="false"
                 aria-controls="collapseExample">
-                การมีส่วนร่วมกับนโยบายบริษัท<span class="material-icons">keyboard_double_arrow_down</span>
+                การมีส่วนร่วมกับนโยบายบริษัท<span class="material-symbols-outlined">arrow_drop_down</span>
             </button>
             <div class="collapse" id="Auditcollapse">
                 <div class="card card-body">
@@ -294,13 +286,12 @@
                             </tr>
                             <tr>
                                 <td>ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท</td>
-                                <td> <input class="form-check-input" type="checkbox" value=""
-                                        name="ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท"
-                                        id="ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท"></td>
+                                <td> <input class="form-check-input" type="checkbox" value="" name="checkau1.1"
+                                        id="checkau1.1">
+                                </td>
                                 <td>10</td>
-                                <td><button type="button" class="btn btn-warning"
-                                        onclick="scoreedit('ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท')"
-                                        data-bs-toggle="modal" data-bs-target="#editscore">แก้ไขคะแนน</button></td>
+                                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#au1.1">แก้ไขคะแนน</button></td>
                             </tr>
                         </thead>
                         <tbody>
@@ -315,7 +306,7 @@
 </div>
 <!-- ----------------------------------------------END content---------------------------------------------- -->
 <!-- ---------------------------------------------- Modal ---------------------------------------------- -->
-<div class="modal fade" id="addlist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addlist" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -324,7 +315,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="">
+                <form class="needs-validation" novalidate="">
                     <label for="" class="form-label">หัวข้อที่ต้องการเพิ่ม</label>
                     <select class="form-select" aria-label="Default select example" id="sectionselect"
                         onchange="addlist()">
@@ -346,28 +337,1217 @@
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="editscore" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc2.1" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
-                    <p id="scoreheader"></p>
+                    อัตรากำลังคนรวม (คน)
                 </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="">
-                    <label for="" class="form-label">คะแนนใหม่</label>
-                    <input type="number" class="form-control" id="score" step=".01" onkeyup="getnewscore()">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ครบ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="80" id="fcscore1.1.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ขาด 50% ของโครงสร้างจริง
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="40" id="fcscore1.1.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ขาด 75% ของโครงสร้างจริง
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="20" id="fcscore1.1.3" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ครบ 100%
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="fcscore1.1.4" step=".01">
+                            </div>
+                        </div>
+                    </div>
                     <label for="" class="form-label">วันที่เริ่มใช้</label>
-                    <input type="date" class="form-control" id="startdate" onchange="getnewscore()">
+                    <input type="date" class="form-control" id="startdate" required>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
-                <button type="button" class="btn btn-primary" onclick="commitedit()">บันทึก</button>
+                <button type="submit" class="btn btn-primary">บันทึก</button>
             </div>
             </form>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc2.2" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    จำนวนผู้ช่วยผู้จัดการร้านและหรือหัวหน้าผลัดที่ผ่านการอบหรมหลักสูตรมาตรฐานผู้ช่วยผู้จัดการร้าน
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ขาด 1 คน ไม่เกิน 1เดือน และส่งฝึกอบรมหรือหรือมีเจตนาส่งอบรม
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="45" id="fcscore1.2.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ปฏิบัติตามนี้
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="fcscore1.2.2" step=".01">
+                            </div>
+                        </div>
+                    </div>
+                    <label for="" class="form-label">วันที่เริ่มใช้</label>
+                    <input type="date" class="form-control" id="startdate" required>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="submit" class="btn btn-primary">บันทึก</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc2.3" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    จำนวนพนักงานร้านที่ได้รับการอบรมหลักสูตรมาตรฐานพนักงานร้าน
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                มีการสอนและอบรมครบทุกคน
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="45" id="fcscore1.3.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                มีการสอนและอบรม ≥ 80 % ขึ้นไป
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="20" id="fcscore1.3.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                มีการสอนและอบรม < 80 % </div>
+                                    <div class="col-4">
+                                        <label for="" class="form-label">คะแนนใหม่</label>
+                                        <input type="number" class="form-control" placeholder="0" id="fcscore1.3.3"
+                                            step=".01">
+                                    </div>
+                            </div>
+                        </div>
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc2.4" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    ไม่ออกกฎระเบียบข้อบังคับผิดเงื่อนไขที่ บริษัทฯ กำหนด
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ปฎิบัติตามหลักเกณฑ์
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="20" id="fcscore1.4.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ปฎิบัติตามหลักเกณฑ์
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="fcscore1.4.2" step=".01">
+                            </div>
+                        </div>
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc2.5" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    ปฏิบัติตามกฎระเบียบของบริษัทฯ
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ปฏิบัติตามกฏระเบียบ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="10" id="fcscore1.5.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                พบไม่ปฏิบัติตามกฎระเบียบ 1 เรื่อง
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="fcscore1.5.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                พบไม่ปฏิบัติตามกฎระเบียบ 2 เรื่องขึ้นไป
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="fcscore1.5.3" step=".01">
+                            </div>
+                        </div>
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc3.1" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การดูแลมาตรฐานร้านอย่างสม่ำเสมอ
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                แก้ไข/ปรับปรุงตามAction List ครบทุกหัวข้อที่มีการบันทึก
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="20" id="fcscore3.1.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ได้รับหนังสือขอความร่วมมือจากผู้จัดการฝ่าย หักใบละ (หมายเหตุ ได้รับจาก FC เรื่องเดียวกัน
+                                2 ครั้ง = 1 ใบ ของผจก.ฝ่าย)
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="10" id="fcscore3.1.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                กรณีถ้า SBP ปฏิเสธ,ไม่เซ็นต์
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="fcscore3.1.3" step=".01">
+                            </div>
+                        </div>
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc3.2" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การสั่งสินค้าผ่านระบบ Online
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                Online ครบ 100%
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="20" id="fcscore3.2.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ≥ 80 % ขึ้นไป
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="10" id="fcscore3.2.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                < 80% </div>
+                                    <div class="col-4">
+                                        <label for="" class="form-label">คะแนนใหม่</label>
+                                        <input type="number" class="form-control" placeholder="0" id="fcscore3.2.3"
+                                            step=".01">
+                                    </div>
+                            </div>
+                            <label for="" class="form-label">วันที่เริ่มใช้</label>
+                            <input type="date" class="form-control" id="startdate" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                            <button type="submit" class="btn btn-primary">บันทึก</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc3.3" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การให้ความร่วมมือกับโครงการต่าง ๆ รวมถึงนโยบายใหม่ ๆ ของบริษัทฯ
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ให้ความร่วมมือทุกโครงการ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="30" id="fcscore3.3.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ให้ความร่วมมือบางโครงการ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="15" id="fcscore3.3.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ให้ความร่วมมือ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="fcscore3.3.3" step=".01">
+                            </div>
+                        </div>
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc3.4" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    ความร่วมมือในการประชุมกับทีมOPT
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ให้ความร่วมมือทุกครั้ง
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="30" id="fcscore3.4.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ≥ 80 % ขึ้นไป
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="15" id="fcscore3.4.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                < 80% </div>
+                                    <div class="col-4">
+                                        <label for="" class="form-label">คะแนนใหม่</label>
+                                        <input type="number" class="form-control" placeholder="0" id="fcscore3.4.3"
+                                            step=".01">
+                                    </div>
+                            </div>
+                            <label for="" class="form-label">วันที่เริ่มใช้</label>
+                            <input type="date" class="form-control" id="startdate" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                            <button type="submit" class="btn btn-primary">บันทึก</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="fc3.5" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    ไม่เคยได้รับหนังสือขอความร่วมมือ
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่เคยได้รับเลย
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="30" id="fcscore3.5.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ได้รับหนังสือขอความร่วมมือจากผู้จัดการฝ่าย หักใบละ (หมายเหตุ ได้รับจาก FC เรื่องเดียวกัน
+                                2 ครั้ง = 1 ใบ ของผจก.ฝ่าย)
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="15" id="fcscore3.5.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                กรณีถ้า SBP ปฏิเสธ,ไม่เซ็นต์
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="fcscore3.5.3" step=".01">
+                            </div>
+                        </div>
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac1.1" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การ Online Receiving Log
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ตรงเวลา(ก่อนเที่ยงของวันถัดไป)
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore1.1.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ≤ 1 ครั้งต่อ 1 เดือน
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="3" id="acscore1.1.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                > 1 ครั้งต่อ 1 เดือน
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore1.1.3" step=".01">
+                            </div>
+                        </div>
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac1.2" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การ Online Cash Report
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ตรงเวลา(ก่อนเที่ยงของวันถัดไป)
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore1.2.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ≤ 1 ครั้งต่อ 1 เดือน
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="3" id="acscore1.2.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                > 1 ครั้งต่อ 1 เดือน
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore1.2.3" step=".01">
+                            </div>
+                        </div>
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac1.3" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การออนไลน์ข้อมูลสินค้ายกเลิกขาย
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                Online ตรงตามรอบ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore1.3.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ Online และมีการติดตามทวงถาม
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore1.3.2" step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac1.4" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การจัดส่งเอกสาร Receiving Log
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ตรงเวลา
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore1.4.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ≤ 1 ครั้งต่อ 1 เดือน
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="3" id="acscore1.4.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                > 1 ครั้งต่อ 1 เดือน
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore1.4.3" step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac1.5" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การคีย์ข้อมูล Receiving Log
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่มีบิลรออนุมัติจาก Supplier
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore1.5.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                มีบิลรออนุมัติจาก Supplier
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore1.5.2" step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac1.6" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การคีย์ข้อมูล Mark Up/Down
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ตรงตามรอบที่กำหนด
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore1.6.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ตรงตามรอบที่กำหนด
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore1.6.2" step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac2.1" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    ความร่วมมือในการตรวจนับเงินสด
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ให้ความร่วมมือทุกครั้ง
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="10" id="acscore2.1.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ให้ความร่วมมือ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore2.1.1" step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac2.2" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    ปฏิบัติตามขั้นตอนการตรวจนับเงินสด
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ปฏิบัติตามกฎระเบียบทุกครั้ง
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="20" id="acscore2.2.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ปฏิบัติตามกฎระเบียบ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore2.2.1" step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac2.3.1" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    วัดผลจากการให้ความร่วมมือในการตัดจ่ายสินค้ายกเลิกขาย(รูมศูนย์)
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ให้ความร่วมมือทุกครั้ง
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore2.3.1.1"
+                                    step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ให้ความร่วมมือ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore2.3.1.2"
+                                    step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac2.3.2" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    วัดผลจากการให้ความร่วมมือในการติดตามสินค้า และเซนต์รับผลตรวจนับไม่เป็นทางการ
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ให้ความร่วมมือและเซนต์รับผลทุกครั้ง
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore2.3.2.1"
+                                    step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ให้ความร่วมมือหรือไม่เซนต์รับผล
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore2.3.2.2"
+                                    step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac2.3.3" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    วัดผลจากการให้ความร่วมมือในการจัดเรียงสินค้า และ Stock
+                    ให้เป็นระเบียบเพื่อการตรวจนับและจัดแยกกลุ่มสินค้าเป็นหมวดหมู่
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ให้ความร่วมมือทุกครั้ง และ Stock ไม่เป็นระเบียบในการตรวจนับ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore2.3.3.1"
+                                    step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ไม่ให้ความร่วมมือ หรือ Stock ไม่เป็นระเบียบในการตรวจนับ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore2.3.3.2"
+                                    step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac2.4" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    การจัดเก็บเอกสาร CASH REPORT และ R/L
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                เอกสารถูกต้องครบถ้วน
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="5" id="acscore2.4.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                เอกสารไม่เรียบร้อยและไม่ถูกต้อง
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore2.4.2" step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="ac3.1" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    นำฝากธนาคารครบถ้วน/ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ฝากครบทุกครั้ง,ครบถ้วน,ถูกต้องตามเวลา
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="25" id="acscore3.1.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                หากเกิดเหตุการณ์เปลี่ยน Bank ไม่แจ้ง, ฝากไม่ครบ > 2,000 บาท ฝากช้า โดยไม่แจ้งให้ OPT
+                                ทราบล่วงหน้า หักครั้งละ
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="10" id="acscore3.1.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                หากเกิดกรณีไม่นำฝากตามที่บริษัทกำหนด
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="0" id="acscore3.1.3" step=".01">
+                            </div>
+                        </div>
+
+                        <label for="" class="form-label">วันที่เริ่มใช้</label>
+                        <input type="date" class="form-control" id="startdate" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="au1.1" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 d-flex justify-content-center align-items-center" id="exampleModalLabel">
+                    ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัทฯ
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate="">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                ≥ 100 %
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="100" id="au1.1.1" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ≥ 75 %
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="75" id="au1.1.2" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                ≥ 50 %
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="form-label">คะแนนใหม่</label>
+                                <input type="number" class="form-control" placeholder="50" id="au1.1.3" step=".01">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                < 50 % </div>
+                                    <div class="col-4">
+                                        <label for="" class="form-label">คะแนนใหม่</label>
+                                        <input type="number" class="form-control" placeholder="0" id="au1.1.4"
+                                            step=".01">
+                                    </div>
+                            </div>
+
+                            <label for="" class="form-label">วันที่เริ่มใช้</label>
+                            <input type="date" class="form-control" id="startdate" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                            <button type="submit" class="btn btn-primary">บันทึก</button>
+                        </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

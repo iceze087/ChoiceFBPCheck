@@ -16,7 +16,6 @@
                 <tr>
                     <td></td>
                     <td>เลือกคะแนน</td>
-
                 </tr>
                 <tr>
                     <td><b>ความร่วมมือในการส่งข้อมูล (25 คะแนน)</b></td>
@@ -25,41 +24,64 @@
                 <tr>
                     <td>1.1 การ Online Receiving log</td>
                     <td>
-                        <div class="scoretag"><label id="a2" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3" id="1.1 การ Online  Receiving log"
-                            onchange="showvalue('a2', id)">
+                        <select class="form-select" aria-label="Default select example" required name="ac1.1">
+                            <option selected></option>
+                            <option value="5">ตรงเวลา(ก่อนเที่ยงของวันถัดไป)</option>
+                            <option value="3">≤ 1 ครั้งต่อ 1 เดือน</option>
+                            <option value="0">> 1 ครั้งต่อ 1 เดือน</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
                     <td>1.2 การ Online Cash Report</td>
                     <td>
-                        <div class="scoretag"><label id="a3" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5" id="1.2 การ Online Cash Report"
-                            onchange="showvalue('a3', id)">
+                        <select class="form-select" aria-label="Default select example" required name="ac1.2">
+                            <option selected></option>
+                            <option value="5">ตรงเวลา(ก่อนเที่ยงของวันถัดไป)</option>
+                            <option value="3">≤ 1 ครั้งต่อ 1 เดือน</option>
+                            <option value="0">> 1 ครั้งต่อ 1 เดือน</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>1.3 การจัดส่งเอกสาร Receiving Log</td>
+                    <td>1.3 การออนไลน์ข้อมูลสินค้ายกเลิกขาย</td>
                     <td>
-                        <div class="scoretag"><label id="a4" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3" id="1.3 การจัดส่งเอกสาร Receiving Log"
-                            onchange="showvalue('a4', id)">
+                        <select class="form-select" aria-label="Default select example"  required name="ac1.3">
+                            <option selected></option>
+                            <option value="5">Online ตรงตามรอบ</option>
+                            <option value="0">ไม่ Online และมีการติดตามทวงถาม</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>1.4 การคีย์ข้อมูล Receiving Log</td>
+                    <td>1.4 การจัดส่งเอกสาร Receiving Log</td>
                     <td>
-                        <div class="scoretag"><label id="a5" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3" id="1.4 การคีย์ข้อมูล Receiving Log"
-                            onchange="showvalue('a5', id)">
+                        <select class="form-select" aria-label="Default select example" required name="ac1.4">
+                            <option selected></option>
+                            <option value="5">ตรงเวลา</option>
+                            <option value="3">≤ 1 ครั้งต่อ 1 เดือน</option>
+                            <option value="0">> 1 ครั้งต่อ 1 เดือน</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>1.5 การคีย์ข้อมูล Mark up / Down</td>
+                    <td>1.5 การคีย์ข้อมูล Receiving Log</td>
                     <td>
-                        <div class="scoretag"><label id="a6" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5" id="1.5 การคีย์ข้อมูล Mark up / Down"
-                            onchange="showvalue('a6', id)">
+                        <select class="form-select" aria-label="Default select example"required name="ac1.5">
+                            <option selected></option>
+                            <option value="5">ไม่มีบิลรออนุมัติจาก Supplier</option>
+                            <option value="0">มีบิลรออนุมัติจาก Supplier</option>
+                          </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1.6 การคีย์ข้อมูล Mark Up/Down</td>
+                    <td>
+                        <select class="form-select" aria-label="Default select example" required name="ac1.6">
+                            <option selected></option>
+                            <option value="5">ตรงตามรอบที่กำหนด</option>
+                            <option value="0">ไม่ตรงตามรอบที่กำหนด</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
@@ -69,25 +91,65 @@
                 <tr>
                     <td>2.1 ความร่วมมือในการตรวจนับเงินสด</td>
                     <td>
-                        <div class="scoretag"><label id="a8" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5" id="2.1 ความร่วมมือในการตรวจนับเงินสด"
-                            onchange="showvalue('a8', id)">
+                        <select class="form-select" aria-label="Default select example"  required name="ac2.1">
+                            <option selected></option>
+                            <option value="10">ให้ความร่วมมือทุกครั้ง</option>
+                            <option value="0">ไม่ให้ความร่วมมือ</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
                     <td>2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด</td>
                     <td>
-                        <div class="scoretag"><label id="a9" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3" id="2.2 ปฎิบัติตามกฎระเบียบการตรวจนับเงินสด"
-                            onchange="showvalue('a9', id)">
+                        <select class="form-select" aria-label="Default select example" required name="ac2.2">
+                            <option selected></option>
+                            <option value="20">ปฏิบัติตามกฎระเบียบทุกครั้ง</option>
+                            <option value="0">ไม่ปฏิบัติตามกฎระเบียบ</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>2.3 ความร่วมมือในการตรวจนับสินค้า</td>
+                    <td><b>2.3 ความร่วมมือในการตรวจนับสินค้า</b></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2.3.1 วัดผลจากการให้ความร่วมมือในการตัดจ่ายสินค้ายกเลิกขาย(รูมศูนย์)</td>
                     <td>
-                        <div class="scoretag"><label id="a10" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="3" id="2.3 ความร่วมมือในการตรวจนับสินค้า"
-                            onchange="showvalue('a10', id)">
+                        <select class="form-select" aria-label="Default select example" required name="ac2.3.1">
+                            <option selected></option>
+                            <option value="5">ให้ความร่วมมือทุกครั้ง</option>
+                            <option value="0">ไม่ให้ความร่วมมือ</option>
+                          </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2.3.2 วัดผลจากการให้ความร่วมมือในการติดตามสินค้า และเซนต์รับผลตรวจนับไม่เป็น</td>
+                    <td>
+                        <select class="form-select" aria-label="Default select example" required name="ac2.3.2">
+                            <option selected></option>
+                            <option value="5">ให้ความร่วมมือและเซนต์รับผลทุกครั้ง</option>
+                            <option value="0">ไม่ให้ความร่วมมือหรือไม่เซนต์รับผล</option>
+                          </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2.3.3 วัดผลจากการให้ความร่วมมือในการจัดเรียงสินค้า และ Stock ให้เป็นระเบียบเพื่อ</td>
+                    <td>
+                        <select class="form-select" aria-label="Default select example" required name="ac2.3.3">
+                            <option selected></option>
+                            <option value="5">ให้ความร่วมมือทุกครั้ง และ Stock ไม่เป็นระเบียบในการตรวจนับ</option>
+                            <option value="0">ไม่ให้ความร่วมมือ หรือ Stock ไม่เป็นระเบียบในการตรวจนับ</option>
+                          </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2.4 การจัดเก็บเอกสาร CASH REPORT และ R/L</td>
+                    <td>
+                        <select class="form-select" aria-label="Default select example" required name="ac2.4">
+                            <option selected></option>
+                            <option value="5">ให้ความร่วมมือทุกครั้ง และ Stock ไม่เป็นระเบียบในการตรวจนับ</option>
+                            <option value="0">ไม่ให้ความร่วมมือ หรือ Stock ไม่เป็นระเบียบในการตรวจนับ</option>
+                          </select>
                     </td>
                 </tr>
                 <tr>
@@ -97,10 +159,12 @@
                 <tr>
                     <td>3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น.</td>
                     <td>
-                        <div class="scoretag"><label id="a12" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5"
-                            id="3.1 นำฝากธนาคารครบถ้วน / ถูกต้อง ภายในเวลาที่กำหนด 12.00 น."
-                            onchange="showvalue('a12', id)">
+                        <select class="form-select" aria-label="Default select example" required name="ac3.1">
+                            <option selected></option>
+                            <option value="25">ฝากครบทุกครั้ง,ครบถ้วน,ถูกต้องตามเวลา</option>
+                            <option value="10">หากเกิดเหตุการณ์เปลี่ยน Bank ไม่แจ้ง, ฝากไม่ครบ > 2,000 บาท ฝากช้า โดยไม่แจ้งให้ OPT ทราบล่วงหน้า หักครั้งละ</option>
+                            <option value="0">หากเกิดกรณีไม่นำฝากตามที่บริษัทกำหนด</option>
+                          </select>
                     </td>
                 </tr>
             </tbody>

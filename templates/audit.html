@@ -18,11 +18,15 @@
                     <td>เลือกคะแนน</td>
                 </tr>
                 <tr>
-                    <td>ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท</td>
+                    <td>1 ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท</td>
                     <td>
-                        <div class="scoretag"><label id="a1" class="range-value"></label></div><input type="range"
-                            class="form-range" min="1" max="5" id="ความร่วมมือในการเข้าร่วมกิจกรรมต่าง ๆ ของบริษัท"
-                            onchange="showvalue('a1', id)" required>
+                        <select class="form-select" aria-label="Default select example" required name="au1.1">
+                            <option selected></option>
+                            <option value="100">≥ 100 %</option>
+                            <option value="75">≥ 75 %</option>
+                            <option value="50">≥ 50 %</option>
+                            <option value="0">< 50 %</option>
+                        </select>
                     </td>
                 </tr>
             </tbody>
